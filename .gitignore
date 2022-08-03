@@ -350,4 +350,5 @@ MigrationBackup/
 .ionide/
 
 /bin
+/obj
 .vs
