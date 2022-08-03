@@ -1,0 +1,12 @@
+C:\Users\jorge\Documents\repos\FindServiceHn.API\FindServiceHn.Database\bin\Debug\net6.0\FindServiceHn.Database.deps.json
+C:\Users\jorge\Documents\repos\FindServiceHn.API\FindServiceHn.Database\bin\Debug\net6.0\FindServiceHn.Database.dll
+C:\Users\jorge\Documents\repos\FindServiceHn.API\FindServiceHn.Database\bin\Debug\net6.0\ref\FindServiceHn.Database.dll
+C:\Users\jorge\Documents\repos\FindServiceHn.API\FindServiceHn.Database\bin\Debug\net6.0\FindServiceHn.Database.pdb
+C:\Users\jorge\Documents\repos\FindServiceHn.API\FindServiceHn.Database\obj\Debug\net6.0\FindServiceHn.Database.csproj.AssemblyReference.cache
+C:\Users\jorge\Documents\repos\FindServiceHn.API\FindServiceHn.Database\obj\Debug\net6.0\FindServiceHn.Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jorge\Documents\repos\FindServiceHn.API\FindServiceHn.Database\obj\Debug\net6.0\FindServiceHn.Database.AssemblyInfoInputs.cache
+C:\Users\jorge\Documents\repos\FindServiceHn.API\FindServiceHn.Database\obj\Debug\net6.0\FindServiceHn.Database.AssemblyInfo.cs
+C:\Users\jorge\Documents\repos\FindServiceHn.API\FindServiceHn.Database\obj\Debug\net6.0\FindServiceHn.Database.csproj.CoreCompileInputs.cache
+C:\Users\jorge\Documents\repos\FindServiceHn.API\FindServiceHn.Database\obj\Debug\net6.0\FindServiceHn.Database.dll
+C:\Users\jorge\Documents\repos\FindServiceHn.API\FindServiceHn.Database\obj\Debug\net6.0\ref\FindServiceHn.Database.dll
+C:\Users\jorge\Documents\repos\FindServiceHn.API\FindServiceHn.Database\obj\Debug\net6.0\FindServiceHn.Database.pdb
