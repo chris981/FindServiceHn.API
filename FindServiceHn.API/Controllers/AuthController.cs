@@ -33,7 +33,7 @@ namespace FindServiceHn.API.Controllers
             return Ok(users);
         }
 
-        [HttpGet("{id:int}")]
+        [HttpGet("GetById/{id:int}")]
         public IActionResult GetById(int id)
         {
             // only admins can access other user records

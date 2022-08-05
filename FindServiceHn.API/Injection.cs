@@ -1,5 +1,6 @@
 ﻿using FindServiceHn.Database.Repositories;
 using FindServiceHN.Core.Authentication;
+using FindServiceHN.Core.CategoryManager;
 using FindServiceHN.Core.UserManager;
 
 namespace FindServiceHn.API
@@ -11,6 +12,7 @@ namespace FindServiceHn.API
             builder.Services.AddScoped(typeof(IRepository<>), typeof(FindServiceHnRepositoryBase<>));
             builder.Services.AddScoped<IJwtUtils, JwtUtils>();
             builder.Services.AddScoped<IUserManager, UserManager>();
+            builder.Services.AddScoped<ICategoryManager, CategoryManager>();
         }
     }
 }
