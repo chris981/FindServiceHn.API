@@ -15,8 +15,11 @@ namespace FindServiceHn.Database
         {}
 
         public DbSet<User> Users { get; set; }
+        public DbSet <Provider> Providers { get; set; }
+        public DbSet <Provider_service> Provider_Services { get; set; }
         public DbSet<Category> Categories { get; set; }
-
+        public DbSet<Provider_plan_job> Provider_Plan_Jobs { get; set; }
+        public DbSet<Provider_eval> provider_Evals {get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>()

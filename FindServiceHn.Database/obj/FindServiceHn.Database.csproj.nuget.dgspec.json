@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj": {}
+    "C:\\Users\\Cdams\\source\\repos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj": {
+    "C:\\Users\\Cdams\\source\\repos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj",
+        "projectUniqueName": "C:\\Users\\Cdams\\source\\repos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj",
         "projectName": "FindServiceHn.Database",
-        "projectPath": "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj",
-        "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHn.Database\\obj\\",
+        "projectPath": "C:\\Users\\Cdams\\source\\repos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj",
+        "packagesPath": "C:\\Users\\Cdams\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cdams\\source\\repos\\FindServiceHn.API\\FindServiceHn.Database\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Cdams\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
