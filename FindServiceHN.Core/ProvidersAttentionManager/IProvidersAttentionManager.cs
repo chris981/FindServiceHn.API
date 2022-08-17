@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace FindServiceHN.Core.ProvidersAttentionManager
 {
-    public interface IProviders_AttentionManager
+    public interface IProvidersAttentionManager
     {
         
-        Task<IEnumerable<Providers_Attention>> GetAllAsync();
+        Task<IEnumerable<ProvidersAttention>> GetAllAsync();
     
     }
 }

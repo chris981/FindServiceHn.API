@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHn.API\\FindServiceHn.API.csproj": {}
+    "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHn.API\\FindServiceHn.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHn.API\\FindServiceHn.API.csproj": {
+    "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHn.API\\FindServiceHn.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHn.API\\FindServiceHn.API.csproj",
+        "projectUniqueName": "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHn.API\\FindServiceHn.API.csproj",
         "projectName": "FindServiceHn.API",
-        "projectPath": "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHn.API\\FindServiceHn.API.csproj",
-        "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHn.API\\obj\\",
+        "projectPath": "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHn.API\\FindServiceHn.API.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHn.API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHN.Core\\FindServiceHN.Core.csproj": {
-                "projectPath": "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHN.Core\\FindServiceHN.Core.csproj"
+              "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHN.Core\\FindServiceHN.Core.csproj": {
+                "projectPath": "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHN.Core\\FindServiceHN.Core.csproj"
               },
-              "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj": {
-                "projectPath": "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj"
+              "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj": {
+                "projectPath": "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj"
               }
             }
           }
@@ -86,7 +82,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -98,25 +95,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHN.Core\\FindServiceHN.Core.csproj": {
+    "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHN.Core\\FindServiceHN.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHN.Core\\FindServiceHN.Core.csproj",
+        "projectUniqueName": "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHN.Core\\FindServiceHN.Core.csproj",
         "projectName": "FindServiceHN.Core",
-        "projectPath": "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHN.Core\\FindServiceHN.Core.csproj",
-        "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHN.Core\\obj\\",
+        "projectPath": "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHN.Core\\FindServiceHN.Core.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHN.Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -130,8 +123,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj": {
-                "projectPath": "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj"
+              "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj": {
+                "projectPath": "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj"
               }
             }
           }
@@ -169,7 +162,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -178,25 +172,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj": {
+    "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj",
+        "projectUniqueName": "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj",
         "projectName": "FindServiceHn.Database",
-        "projectPath": "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj",
-        "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jorge\\Documents\\repos\\FindServiceHn.API\\FindServiceHn.Database\\obj\\",
+        "projectPath": "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHn.Database\\FindServiceHn.Database.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\DELL\\Desktop\\BackendFundamentos\\FindServiceHn.API\\FindServiceHn.Database\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -233,7 +223,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -242,7 +233,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

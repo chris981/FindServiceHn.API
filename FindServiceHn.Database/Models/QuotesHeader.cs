@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FindServiceHn.Database.Models
 {
-    public class Quotes_Header
+    public class QuotesHeader
     {
          public int IdQuoteHeader {get; set;}
          public int IdQuoteDetail {get; set;}

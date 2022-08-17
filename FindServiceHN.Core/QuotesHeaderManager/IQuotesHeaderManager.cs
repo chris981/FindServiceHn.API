@@ -6,8 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 namespace FindServiceHN.Core.Quotes_HeaderManager
 {
-    public interface IQuotes_HeaderManager
+    public interface IQuotesHeaderManager
     {
-         Task<IEnumerable<Quotes_Header>> GetAllAsync();
+         Task<IEnumerable<QuotesHeader>> GetAllAsync();
     }
 }

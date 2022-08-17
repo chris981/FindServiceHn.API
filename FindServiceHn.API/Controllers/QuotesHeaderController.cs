@@ -1,4 +1,4 @@
-using FindServiceHN.Core.Quotes_HeaderManager;
+using FindServiceHN.Core.QuotesHeaderManager;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,23 +9,23 @@ namespace FindServiceHn.API.Controllers
     [ApiController]
     public class Quotes_HeaderController : ControllerBase
     {
-        private readonly IQuotes_HeaderManager quotes_headerManager;
+        private readonly IQuotesHeaderManager quotesheaderManager;
 
-        public CategoryController(IQuotes_HeaderManager quotes_headerManager)
+        public CategoryController(IQuotesHeaderManager quotesheaderManager)
         {
-            this.quotes_headerManager = quotes_headerManager;
+            this.quotesheaderManager = quotesheaderManager;
         }
 
         [HttpGet("GetQuotes")]
         public async Task<IActionResult> GetAsync()
         {
-            var quotes_headerResult = await quotes_headerManager.GetAllAsync();
-            if(!quotes_headerResult.Any())
+            var quotesheaderResult = await quotesheaderManager.GetAllAsync();
+            if(!quotesheaderResult.Any())
             {
                 return NotFound();
             }
 
-            return Ok(quotes_headerResult);
+            return Ok(quotesheaderResult);
         }
     }
 }

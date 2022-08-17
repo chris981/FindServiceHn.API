@@ -1,4 +1,4 @@
-﻿using FindServiceHN.Core.Quotes_DetailManager;
+﻿using FindServiceHN.Core.QuotesDetailManager;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,19 +6,19 @@ namespace FindServiceHn.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class Quotes_DetailController : ControllerBase
+    public class QuotesDetailController : ControllerBase
     {
-        private readonly IQuotes_DetailManager quotes_detailManager;
+        private readonly IQuotesDetailManager quotesdetailManager;
 
-        public Quotes_DetailController(IQuotes_DetailManager quotes_detailManager)
+        public Quotes_DetailController(IQuotesDetailManager quotesdetailManager)
         {
-            this.quotes_detailManager = quotes_detailManager;
+            this.quotesdetailManager = quotesdetailManager;
         }
 
         [HttpGet("GetQuotesDetail")]
         public async Task<IActionResult> GetAsync()
         {
-            var quotesResult = await Quotes_DetailManager.GetAllAsync();
+            var quotesResult = await QuotesDetailManager.GetAllAsync();
             if (!quotesResult.Any())
             {
                 return NotFound();

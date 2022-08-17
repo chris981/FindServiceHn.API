@@ -4,20 +4,20 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FindServiceHn.API.Controllers
 {
-    public class Providers_AttentionController : ControllerBase
+    public class ProvidersAttentionController : ControllerBase
     {
         
-        private readonly IProviders_AttentionManager providers_attentionManager;
+        private readonly IProvidersAttentionManager providersattentionManager;
 
-        public CategoryController(IProviders_AttentionManager providers_attentionManager)
+        public CategoryController(IProvidersAttentionManager providersattentionManager)
         {
-            this.providers_attentionManager = providers_attentionManager;
+            this.providersattentionManager = providersattentionManager;
         }
 
         [HttpGet("GetProvidersAtt")]
         public async Task<IActionResult> GetAsync()
         {
-            var providerattResult = await providers_attentionManager.GetAllAsync();
+            var providerattResult = await providersattentionManager.GetAllAsync();
             if(!providerattResult.Any())
             {
                 return NotFound();

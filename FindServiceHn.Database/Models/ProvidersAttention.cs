@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FindServiceHn.Database.Models
 {
-    public class Providers_Attention
+    public class ProvidersAttention
     {
      public int IdProviderAttention {get; set;}
      public string Description {get; set;}
