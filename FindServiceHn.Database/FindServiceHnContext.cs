@@ -22,6 +22,9 @@ namespace FindServiceHn.Database
         {
             modelBuilder.Entity<Category>()
                 .HasKey(s => s.IdCategory);
+
+            modelBuilder.Entity<Product>()
+                .HasKey(s => s.Id);
         }
     }
 }
