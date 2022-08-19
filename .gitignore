@@ -358,3 +358,6 @@ bin/
 obj/
 Debug/
 obj/Debug
+
+
+*.obj
