@@ -15,7 +15,11 @@ namespace FindServiceHn.Database
         {}
 
         public DbSet<User> Users { get; set; }
+        public DbSet <Provider> Providers { get; set; }
+        public DbSet <ProviderService> Provider_Services { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<ProviderPlanJob> Provider_Plan_Jobs { get; set; }
+        public DbSet<ProviderEval> provider_Evals {get; set; }
         public DbSet<ServicesStatus>ServicesStatuss { get; set;}
         public DbSet<QuotesDetail> QuotesDetails {get; set;}
         public DbSet<QuotesHeader> QuotesHeaders {get; set;}
