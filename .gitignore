@@ -352,3 +352,7 @@ MigrationBackup/
 /bin
 /obj
 .vs
+
+bin/
+obj/
+Debug/

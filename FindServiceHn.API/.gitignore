@@ -354,6 +354,11 @@ MigrationBackup/
 /debug
 .vs
 
+bin/
+obj/
+Debug/
+Release/
+
 ./bin
 ./obj
 ./debug
