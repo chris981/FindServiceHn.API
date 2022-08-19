@@ -17,11 +17,10 @@ namespace FindServiceHn.Database
         public DbSet<User> Users { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<ServicesStatus>ServicesStatuss { get; set;}
-
         public DbSet<QuotesDetail> QuotesDetails {get; set;}
-
         public DbSet<QuotesHeader> QuotesHeaders {get; set;}
         public DbSet<ProvidersAttention> ProvidersAttentions {get; set;}
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
