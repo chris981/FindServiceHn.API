@@ -9,20 +9,20 @@ using System.Threading.Tasks;
 
 namespace FindServiceHn.Core.ServicesStatusManager
 {
-    public class ServicesStatus : IServicesStatus
-    {
-        private readonly IRepository<ServicesStatus> servicesstatusRepository;
+    //public class ServicesStatus : IServicesStatus
+    //{
+    //    private readonly IRepository<ServicesStatus> servicesstatusRepository;
 
-        public ServicesStatusManager(IRepository<ServicesStatus> servicesstatusRepository)
-        {
-            this.servicesstatusRepository = servicesstatusRepository;
+    //    public ServicesStatusManager(IRepository<ServicesStatus> servicesstatusRepository)
+    //    {
+    //        this.servicesstatusRepository = servicesstatusRepository;
 
-        }
+    //    }
 
-        public async Task<IEnumerable<ServicesStatus>> GetAllAsync()
-        {
-            return await this.servicesstatusRepository.All().ToListAsync();
-        }
-    }
+    //    public async Task<IEnumerable<ServicesStatus>> GetAllAsync()
+    //    {
+    //        return await this.servicesstatusRepository.All().ToListAsync();
+    //    }
+    //}
 
 }

@@ -18,7 +18,7 @@ namespace FindServiceHn.API
             builder.Services.AddScoped<IJwtUtils, JwtUtils>();
             builder.Services.AddScoped<IUserManager, UserManager>();
             builder.Services.AddScoped<ICategoryManager, CategoryManager>();
-            builder.Services.AddScoped<IServicesStatusManager, ServicesStatusManager>();
+            //builder.Services.AddScoped<IServicesStatusManager, ServicesStatusManager>();
             builder.Services.AddScoped<IQuotesDetailManager, QuotesDetailManager>();
             builder.Services.AddScoped<IProvidersAttentionManager, ProvidersAttentionManager>();
             builder.Services.AddScoped<IOrderDetailManager, OrderDetailManager>();

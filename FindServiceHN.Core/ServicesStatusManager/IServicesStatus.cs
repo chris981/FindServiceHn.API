@@ -9,6 +9,6 @@ namespace FindServiceHN.Core.ServicesStatusManager
 {
     public interface IServicesStatusManager
     {
-        Task<IEnumerable<Services>> GetAllAsync();
+        //Task<IEnumerable<Services>> GetAllAsync();
     }
 }

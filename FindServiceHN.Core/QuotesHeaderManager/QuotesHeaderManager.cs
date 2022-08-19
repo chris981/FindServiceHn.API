@@ -14,7 +14,7 @@ namespace FindServiceHN.Core.QuotesHeaderManager
     {
         private readonly IRepository<QuotesHeader> quotesheaderRepository;
 
-        public CategoryManager(IRepository<Quotes_Header> quotesheaderRepository)
+        public QuotesHeaderManager(IRepository<QuotesHeader> quotesheaderRepository)
         {
             this.quotesheaderRepository = quotesheaderRepository;
         }

@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace FindServiceHN.Core.QuotesDetailManager
 {
-    public class Quotes_DetailManager : IQuotesDetailManager
+    public class QuotesDetailManager : IQuotesDetailManager
     {
         private readonly IRepository<QuotesDetail> quotesdetailRepository;
 
-        public Quotes_DetailManager(IRepository<QuotesDetail> quotesdetailRepository)
+        public QuotesDetailManager(IRepository<QuotesDetail> quotesdetailRepository)
         {
             this.quotesdetailRepository = quotesdetailRepository;
         }
