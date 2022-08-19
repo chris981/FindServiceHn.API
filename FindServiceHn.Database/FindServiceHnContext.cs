@@ -31,10 +31,6 @@ namespace FindServiceHn.Database
                 .HasKey(s => s.IdCategory);
             modelBuilder.Entity<ServicesStatus>()
                 .HasKey(s => s.IdServicesStatus);
-            modelBuilder.Entity<QuotesDetails>()
-                .HasKey(s => s.IdQuoteDetail);  
-            modelBuilder.Entity<QuotesHeaders>()
-                .HasKey(s => s.IdQuoteHeader);
             modelBuilder.Entity<ProvidersAttention>()
                 .HasKey(s => s.IdProviderAttention);
             modelBuilder.Entity<Order_detail>()
@@ -43,6 +39,10 @@ namespace FindServiceHn.Database
                 .HasKey(s => s.IdSatisfaction);
             modelBuilder.Entity<Order_status>()
                 .HasKey(s => s.IdStatusOrder);
+            modelBuilder.Entity<QuotesHeader>()
+                .HasKey(s => s.IdQuoteHeader);
+            modelBuilder.Entity<QuotesDetail>()
+                .HasKey(s => s.IdQuoteDetail);
         }
     }
 }
