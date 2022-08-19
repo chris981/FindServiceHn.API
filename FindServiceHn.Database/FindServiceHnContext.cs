@@ -43,6 +43,8 @@ namespace FindServiceHn.Database
                 .HasKey(s => s.IdQuoteHeader);
             modelBuilder.Entity<QuotesDetail>()
                 .HasKey(s => s.IdQuoteDetail);
+            modelBuilder.Entity<Product>()
+                .HasKey(s => s.Id);
         }
     }
 }

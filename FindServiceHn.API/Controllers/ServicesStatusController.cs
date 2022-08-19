@@ -8,23 +8,23 @@ namespace FindServiceHn.API.Controllers
     [ApiController]
     public class ServicesStatusController : ControllerBase
     {
-        private readonly IServicesStatusManager ServicesStatusManager;
+        private readonly IServicesStatusManager servicesStatusManager;
 
         public ServicesStatusController(IServicesStatusManager servicesStatusManager)
         {
-            this.ServicesStatusManager = servicesStatusManager;
+            this.servicesStatusManager = servicesStatusManager;
         }
 
         [HttpGet("GetServicesStatus")]
         public async Task<IActionResult> GetAsync()
         {
-            var ServicesStatusResult = await ServicesStatusManager.GetAllAsync();
-            if (!categoriesResult.Any())
+            var servicesStatusResult = await this.servicesStatusManager.GetAllAsync();
+            if (!servicesStatusResult.Any())
             {
                 return NotFound();
             }
 
-            return Ok(ServicesStatusResult);
+            return Ok(servicesStatusResult);
         }
     }
 }
