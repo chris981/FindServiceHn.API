@@ -359,5 +359,6 @@ obj/
 Debug/
 obj/Debug
 
-
-*.obj
+/FindServiceHn.API/obj
+/FindServiceHn.Core/obj
+/FindServiceHn.Database/obj
