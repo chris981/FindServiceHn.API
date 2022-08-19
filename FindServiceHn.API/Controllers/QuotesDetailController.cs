@@ -10,7 +10,7 @@ namespace FindServiceHn.API.Controllers
     {
         private readonly IQuotesDetailManager quotesdetailManager;
 
-        public Quotes_DetailController(IQuotesDetailManager quotesdetailManager)
+        public QuotesDetailController(IQuotesDetailManager quotesdetailManager)
         {
             this.quotesdetailManager = quotesdetailManager;
         }
@@ -18,7 +18,7 @@ namespace FindServiceHn.API.Controllers
         [HttpGet("GetQuotesDetail")]
         public async Task<IActionResult> GetAsync()
         {
-            var quotesResult = await QuotesDetailManager.GetAllAsync();
+            var quotesResult = await this.quotesdetailManager.GetAllAsync();
             if (!quotesResult.Any())
             {
                 return NotFound();

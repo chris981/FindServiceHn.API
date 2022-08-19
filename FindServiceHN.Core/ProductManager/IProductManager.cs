@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FindServiceHN.Core.QuotesDetailManager
+namespace FindServiceHN.Core.ProductManager
 {
-    public interface IQuotesDetailManager
+    public interface IProductManager
     {
-        Task<IEnumerable<QuotesDetail>> GetAllAsync();
+        Task<Product> CreateProduct(Product product);
     }
 }

@@ -358,3 +358,7 @@ bin/
 obj/
 Debug/
 Release/
+
+./bin
+./obj
+./debug

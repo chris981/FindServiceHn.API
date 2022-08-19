@@ -9,7 +9,7 @@ namespace FindServiceHn.API.Controllers
         
         private readonly IProvidersAttentionManager providersattentionManager;
 
-        public CategoryController(IProvidersAttentionManager providersattentionManager)
+        public ProvidersAttentionController(IProvidersAttentionManager providersattentionManager)
         {
             this.providersattentionManager = providersattentionManager;
         }

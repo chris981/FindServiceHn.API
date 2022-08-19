@@ -6,10 +6,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FindServiceHN.Core.ServicesStatusManager;
 
 namespace FindServiceHn.Core.ServicesStatusManager
 {
-    public class ServicesStatus : IServicesStatus
+    public class ServicesStatusManager : IServicesStatusManager
     {
         private readonly IRepository<ServicesStatus> servicesstatusRepository;
 
