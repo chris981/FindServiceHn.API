@@ -357,3 +357,4 @@ MigrationBackup/
 bin/
 obj/
 Debug/
+obj/Debug
