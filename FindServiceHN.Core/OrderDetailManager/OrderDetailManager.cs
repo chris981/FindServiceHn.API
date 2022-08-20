@@ -11,14 +11,14 @@ namespace FindServiceHN.Core.OrderDetailManager
 {
 	public class OrderDetailManager : IOrderDetailManager
 	{
-        private readonly IRepository<Order_detail> OrderDetailRepository;
+        private readonly IRepository<OrderDetail> OrderDetailRepository;
 
-        public OrderDetailManager(IRepository<Order_detail> OrderDetailRepository)
+        public OrderDetailManager(IRepository<OrderDetail> OrderDetailRepository)
         {
             this.OrderDetailRepository = OrderDetailRepository;
         }
 
-        public async Task<IEnumerable<Order_detail>> GetAllAsync()
+        public async Task<IEnumerable<OrderDetail>> GetAllAsync()
         {
             return await this.OrderDetailRepository.All().ToListAsync();
         }

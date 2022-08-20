@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace FindServiceHn.Database.Models
 {
-	public class Order_status
+	public class OrderSatisfaction
 	{
-		public int IdStatusOrder { get; set; }
-		public int IdStatus { get; set; }
+		public int IdSatisfaction { get; set; }
+		public int Valorization { get; set; }
 		public string Description { get; set; }
 	}
 }
