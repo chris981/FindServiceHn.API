@@ -3,7 +3,7 @@ using FindServiceHn.Database.Repositories;
 using FindServiceHN.Core.Authentication;
 using FindServiceHN.Core.Models;
 using Microsoft.Extensions.Options;
-using BCrypt.Net;
+using BCryptNet = BCrypt.Net.BCrypt;
 
 namespace FindServiceHN.Core.UserManager
 {
@@ -26,7 +26,7 @@ namespace FindServiceHN.Core.UserManager
 
         public AuthenticateResponse Authenticate(AuthenticateRequest model)
         {
-              var user = this.userRepository.FirstOrDefault(x => x.Username == model.Username);
+              var user = this.userRepository.FirstOrDefault(x => x.UserName.Equals(model.Username) || x.Email.Equals(model.Username));
 
             // validate
             if (user == null || !BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash))
@@ -48,6 +48,36 @@ namespace FindServiceHN.Core.UserManager
             var user = this.userRepository.Find(id);
             if (user == null) throw new KeyNotFoundException("User not found");
             return user;
+        }
+
+        public async Task<bool> DeleteUserAsync(int id)
+        {
+            try
+            {
+                var user = this.GetById(id);
+                this.userRepository.Delete(user);
+                await this.userRepository.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            
+        }
+
+        public async Task<User> UpdateUserAsync(User user)
+        {
+            try
+            {
+                var result = this.userRepository.Update(user);
+                await this.userRepository.SaveChangesAsync();
+                return result;
+            }
+            catch(Exception ex)
+            {
+                return null;
+            }
         }
     }
 }

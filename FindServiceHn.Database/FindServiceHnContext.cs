@@ -33,22 +33,42 @@ namespace FindServiceHn.Database
         {
             modelBuilder.Entity<Category>()
                 .HasKey(s => s.IdCategory);
+
+            modelBuilder.Entity<Provider>()
+                .HasKey(s => s.IdProvider);
+
             modelBuilder.Entity<ServicesStatus>()
                 .HasKey(s => s.IdServicesStatus);
+
             modelBuilder.Entity<ProvidersAttention>()
                 .HasKey(s => s.IdProviderAttention);
+
             modelBuilder.Entity<Order_detail>()
                 .HasKey(s => s.IdOrder);
+
             modelBuilder.Entity<Order_satisfaction>()
                 .HasKey(s => s.IdSatisfaction);
+
             modelBuilder.Entity<Order_status>()
                 .HasKey(s => s.IdStatusOrder);
+
             modelBuilder.Entity<QuotesHeader>()
                 .HasKey(s => s.IdQuoteHeader);
+
             modelBuilder.Entity<QuotesDetail>()
                 .HasKey(s => s.IdQuoteDetail);
+
             modelBuilder.Entity<Product>()
                 .HasKey(s => s.Id);
+
+            modelBuilder.Entity<ProviderEval>()
+                .HasKey(s => s.IdEval);
+
+            modelBuilder.Entity<ProviderPlanJob>()
+                .HasKey(s => s.IdQtyWorks);
+
+            modelBuilder.Entity<ProviderService>()
+                .HasKey(s => s.IdProviderService);
         }
     }
 }

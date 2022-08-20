@@ -12,6 +12,8 @@ namespace FindServiceHN.Core.UserManager
     {
         AuthenticateResponse Authenticate(AuthenticateRequest model);
         IEnumerable<User> GetAll();
+        Task<bool> DeleteUserAsync(int id);
+        Task<User> UpdateUserAsync(User user);
         User GetById(int id);
     }
 }
