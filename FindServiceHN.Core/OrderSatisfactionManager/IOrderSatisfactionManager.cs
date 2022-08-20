@@ -9,6 +9,6 @@ namespace FindServiceHN.Core.OrderSatisfactionManager
 {
 	public interface IOrderSatisfactionManager
 	{
-		Task<IEnumerable<Order_satisfaction>> GetAllAsync();
+		Task<IEnumerable<OrderSatisfaction>> GetAllAsync();
 	}
 }

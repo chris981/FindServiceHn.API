@@ -11,14 +11,14 @@ namespace FindServiceHN.Core.OrderSatisfactionManager
 {
 	public class OrderSatisfactionManager : IOrderSatisfactionManager
 	{
-        private readonly IRepository<Order_satisfaction> OrderSatisfactionRepository;
+        private readonly IRepository<OrderSatisfaction> OrderSatisfactionRepository;
 
-        public OrderSatisfactionManager(IRepository<Order_satisfaction> OrderSatisfactionRepository)
+        public OrderSatisfactionManager(IRepository<OrderSatisfaction> OrderSatisfactionRepository)
         {
             this.OrderSatisfactionRepository = OrderSatisfactionRepository;
         }
 
-        public async Task<IEnumerable<Order_satisfaction>> GetAllAsync()
+        public async Task<IEnumerable<OrderSatisfaction>> GetAllAsync()
         {
             return await this.OrderSatisfactionRepository.All().ToListAsync();
         }

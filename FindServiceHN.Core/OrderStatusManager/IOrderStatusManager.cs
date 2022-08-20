@@ -9,6 +9,6 @@ namespace FindServiceHN.Core.OrderStatusManager
 {
 	public interface IOrderStatusManager
 	{
-		Task<IEnumerable<Order_status>> GetAllAsync();
+		Task<IEnumerable<OrderStatus>> GetAllAsync();
 	}
 }

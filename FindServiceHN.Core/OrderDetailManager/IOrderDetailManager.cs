@@ -9,6 +9,6 @@ namespace FindServiceHN.Core.OrderDetailManager
 {
 	public interface IOrderDetailManager
 	{
-		Task<IEnumerable<Order_detail>> GetAllAsync();
+		Task<IEnumerable<OrderDetail>> GetAllAsync();
 	}
 }
