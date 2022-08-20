@@ -25,9 +25,9 @@ namespace FindServiceHn.Database
         public DbSet<QuotesHeader> QuotesHeaders {get; set;}
         public DbSet<ProvidersAttention> ProvidersAttentions {get; set;}
         public DbSet<Product> Products { get; set; }
-        public DbSet<Order_detail> Order_Details { get; set; }
-        public DbSet<Order_satisfaction> Order_satisfactions { get; set; }
-        public DbSet<Order_status> Order_status { get; set; }
+        public DbSet<OrderDetail> Order_Details { get; set; }
+        public DbSet<OrderSatisfaction> Order_satisfactions { get; set; }
+        public DbSet<OrderStatus> Order_status { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -37,11 +37,11 @@ namespace FindServiceHn.Database
                 .HasKey(s => s.IdServicesStatus);
             modelBuilder.Entity<ProvidersAttention>()
                 .HasKey(s => s.IdProviderAttention);
-            modelBuilder.Entity<Order_detail>()
+            modelBuilder.Entity<OrderDetail>()
                 .HasKey(s => s.IdOrder);
-            modelBuilder.Entity<Order_satisfaction>()
+            modelBuilder.Entity<OrderSatisfaction>()
                 .HasKey(s => s.IdSatisfaction);
-            modelBuilder.Entity<Order_status>()
+            modelBuilder.Entity<OrderStatus>()
                 .HasKey(s => s.IdStatusOrder);
             modelBuilder.Entity<QuotesHeader>()
                 .HasKey(s => s.IdQuoteHeader);

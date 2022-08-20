@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FindServiceHn.Database.Models
 {
-	public class Order_detail
+	public class OrderDetail
 	{
         public int IdOrder { get; set; }
         public int IdCustomer { get; set; }
