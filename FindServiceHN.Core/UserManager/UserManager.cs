@@ -70,7 +70,11 @@ namespace FindServiceHN.Core.UserManager
         {
             try
             {
-                var result = this.userRepository.Update(user);
+                var userToEdit = this.GetById(user.Id);
+                userToEdit.Email = user.Email;
+                userToEdit.UserName = user.UserName;
+
+                var result = this.userRepository.Update(userToEdit);
                 await this.userRepository.SaveChangesAsync();
                 return result;
             }
@@ -78,6 +82,27 @@ namespace FindServiceHN.Core.UserManager
             {
                 return null;
             }
+        }
+
+        public async Task<User> CreateUserAsync(UserDTO user)
+        {
+            if (user != null)
+            {
+                var newUser = new User 
+                {
+                    Name = user.Name,
+                    LastName = user.LastName,
+                    UserName = user.UserName,
+                    Email = user.Email,
+                    Role = Role.User,
+                };
+
+                newUser.PasswordHash = BCryptNet.HashPassword(user.Password);
+                var result = this.userRepository.Create(newUser);
+                await this.userRepository.SaveChangesAsync();
+                return result;
+            }
+            return null;
         }
     }
 }

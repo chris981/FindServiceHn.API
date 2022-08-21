@@ -21,6 +21,18 @@ namespace FindServiceHn.API.Controllers
             return this.Ok(this.userManager.GetAll());
         }
 
+        [AllowAnonymous]
+        [HttpPost("Create")]
+        public async Task<IActionResult> Post([FromBody] UserDTO user)
+        {
+            if(user != null)
+            {
+                var result = await this.userManager.CreateUserAsync(user);
+                return this.Ok(result);
+            }
+            return this.BadRequest();
+        }
+
         [HttpPut("Update")]
         public async Task<IActionResult> UpdateAsync([FromBody] User user)
         {
