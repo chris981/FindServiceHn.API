@@ -1,4 +1,7 @@
 ﻿using FindServiceHn.Database.Models;
+using FindServiceHN.Core.Models;
+using FindServiceHN.Core.OrderSatisfactionManager;
+using FindServiceHN.Core.UserManager;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +12,10 @@ namespace FindServiceHN.Core.OrderSatisfactionManager
 {
 	public interface IOrderSatisfactionManager
 	{
-		Task<IEnumerable<OrderSatisfaction>> GetAllAsync();
-	}
+        IEnumerable<OrderSatisfaction> GetAll();
+        Task<OrderSatisfaction> CreateOrderSatisfactionAsync(OrderSatisfactionDTO orderSatisfaction);
+        Task<bool> DeleteOrderSatisfactionAsync(int id);
+        Task<OrderSatisfaction> UpdateOrderSatisfactionAsync(OrderSatisfaction orderSatisfaction);
+        OrderSatisfaction GetById(int id);
+    }
 }
