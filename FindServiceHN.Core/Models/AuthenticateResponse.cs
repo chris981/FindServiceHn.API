@@ -12,7 +12,7 @@ namespace FindServiceHN.Core.Models
         public AuthenticateResponse(User user, string token)
         {
             Id = user.Id;
-            Username = user.Username;
+            Username = user.UserName;
             Role = user.Role;
             Token = token;
         }

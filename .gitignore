@@ -351,8 +351,13 @@ MigrationBackup/
 
 /bin
 /obj
+/Debug
 .vs
 
 bin/
 obj/
 Debug/
+
+FindServiceHn.API/obj
+FindServiceHN.Core/obj
+FindServiceHn.Database/obj

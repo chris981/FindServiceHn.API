@@ -3,6 +3,7 @@ using System;
 using FindServiceHn.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FindServiceHn.Database.Migrations
 {
     [DbContext(typeof(FindServiceHnContext))]
-    partial class FindServiceHnContextModelSnapshot : ModelSnapshot
+    [Migration("20220819044226_New models")]
+    partial class Newmodels
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,7 +49,7 @@ namespace FindServiceHn.Database.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("FindServiceHn.Database.Models.OrderDetail", b =>
+            modelBuilder.Entity("FindServiceHn.Database.Models.Order_detail", b =>
                 {
                     b.Property<int>("IdOrder")
                         .ValueGeneratedOnAdd()
@@ -80,7 +82,7 @@ namespace FindServiceHn.Database.Migrations
                     b.ToTable("Order_Details");
                 });
 
-            modelBuilder.Entity("FindServiceHn.Database.Models.OrderSatisfaction", b =>
+            modelBuilder.Entity("FindServiceHn.Database.Models.Order_satisfaction", b =>
                 {
                     b.Property<int>("IdSatisfaction")
                         .ValueGeneratedOnAdd()
@@ -98,7 +100,7 @@ namespace FindServiceHn.Database.Migrations
                     b.ToTable("Order_satisfactions");
                 });
 
-            modelBuilder.Entity("FindServiceHn.Database.Models.OrderStatus", b =>
+            modelBuilder.Entity("FindServiceHn.Database.Models.Order_status", b =>
                 {
                     b.Property<int>("IdStatusOrder")
                         .ValueGeneratedOnAdd()
@@ -491,18 +493,6 @@ namespace FindServiceHn.Database.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -510,7 +500,7 @@ namespace FindServiceHn.Database.Migrations
                     b.Property<int>("Role")
                         .HasColumnType("int");
 
-                    b.Property<string>("UserName")
+                    b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("longtext");
 
