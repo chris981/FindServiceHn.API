@@ -9,7 +9,7 @@ namespace FindServiceHN.Core.OrderStatusManager
 {
     public class OrderStatusDTO
     {
-        public int IdStatusOrder { get; set; }
+        
         public int IdStatus { get; set; }
         public string Description { get; set; }
     }

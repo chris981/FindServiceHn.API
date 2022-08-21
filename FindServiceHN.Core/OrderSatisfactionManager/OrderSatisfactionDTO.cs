@@ -9,7 +9,7 @@ namespace FindServiceHN.Core.OrderSatisfactionManager
 {
     public class OrderSatisfactionDTO
     {
-        public int IdSatisfaction { get; set; }
+        
         public int Valorization { get; set; }
         public string Description { get; set; }
     }

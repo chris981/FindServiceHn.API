@@ -21,7 +21,7 @@ namespace FindServiceHn.API.Controllers
             return this.Ok(this.orderDetailManager.GetAll());
         }
 
-        [AllowAnonymous]
+        
         [HttpPost("Create")]
         public async Task<IActionResult> Post([FromBody] OrderDetailDTO orderDetail)
         {
