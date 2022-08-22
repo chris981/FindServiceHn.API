@@ -27,5 +27,33 @@ namespace FindServiceHn.API.Controllers
 
             return Ok(quotesheaderResult);
         }
+        [AllowAnonymous]//-----
+        [HttpPost("Create")]
+        public async Task<IActionResult> Post([FromBody] QuotesHeaderDTO quotesheader)
+        {
+            if(quotesheader != null)
+            {
+                var result = await this.quotesheaderManager.CreateQuotesHeaderAsync(quotesheader);
+                return this.Ok(result);
+            }
+            return this.BadRequest();
+        }
+
+        [HttpPut("Update")]
+        public async Task<IActionResult> UpdateAsync([FromBody] QuotesHeader quotesheader)
+        {
+            var result = await this.quotesheaderManager.UpdateQuotesHeaderAsync(quotesheader);
+            if(result != null)
+                return this.Accepted(quotesheader);
+
+            return this.BadRequest();
+        }
+
+        [HttpDelete("Remove/{id}")]
+        public async Task<IActionResult> RemoveAsync(int IdQuoteHeader)
+        {
+            var result = await this.quotesheaderManager.DeleteQuotesHeaderAsync(IdQuoteHeader);
+            return this.Ok(result);
+        }
     }
 }
