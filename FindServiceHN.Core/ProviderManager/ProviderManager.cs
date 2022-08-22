@@ -157,7 +157,7 @@ namespace FindServiceHN.Core.ProviderManager
         {
             try
             {
-                var providerPlanJob = this.GetById(id);
+                var providerPlanJob = this.GetProviderPlanJobById(id);
                 this.providerPlanJobRepository.Delete(providerPlanJob);
                 await this.providerPlanJobRepository.SaveChangesAsync();
                 return true;
@@ -236,7 +236,7 @@ namespace FindServiceHN.Core.ProviderManager
         {
             try
             {
-                var providerService = this.GetById(id);
+                var providerService = this.GetProviderServiceById(id);
                 this.providerServiceRepository.Delete(providerService);
                 await this.providerServiceRepository.SaveChangesAsync();
                 return true;
@@ -310,7 +310,7 @@ namespace FindServiceHN.Core.ProviderManager
         {
             try
             {
-                var providerEval = this.GetById(id);
+                var providerEval = this.GetProviderEvalById(id);
                 this.providerEvalRepository.Delete(providerEval);
                 await this.providerEvalRepository.SaveChangesAsync();
                 return true;
