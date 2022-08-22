@@ -10,6 +10,7 @@ using FindServiceHN.Core.QuotesDetailManager;
 using FindServiceHN.Core.ProvidersAttentionManager;
 using FindServiceHN.Core.ServicesStatusManager;
 using FindServiceHn.Core.ServicesStatusManager;
+using FindServiceHN.Core.ProviderManager;
 
 namespace FindServiceHn.API
 {
@@ -28,6 +29,7 @@ namespace FindServiceHn.API
             builder.Services.AddScoped<IOrderSatisfactionManager, OrderSatisfactionManager>();
             builder.Services.AddScoped<IOrderStatusManager, OrderStatusManager>();
             builder.Services.AddScoped<IProductManager, ProductManager>();
+            builder.Services.AddScoped<IProviderManager, ProviderManager>();
         }
     }
 }
