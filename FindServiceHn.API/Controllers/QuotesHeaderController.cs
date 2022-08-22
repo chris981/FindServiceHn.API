@@ -1,4 +1,4 @@
-using FindServiceHN.Core.QuotesHeaderManager;
+using FindServiceHN.Core.Quotes_HeaderManager;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,11 +7,11 @@ namespace FindServiceHn.API.Controllers
    
     [Route("api/[controller]")]
     [ApiController]
-    public class Quotes_HeaderController : ControllerBase
+    public class QuotesHeaderController : ControllerBase
     {
         private readonly IQuotesHeaderManager quotesheaderManager;
 
-        public CategoryController(IQuotesHeaderManager quotesheaderManager)
+        public QuotesHeaderController(IQuotesHeaderManager quotesheaderManager)
         {
             this.quotesheaderManager = quotesheaderManager;
         }

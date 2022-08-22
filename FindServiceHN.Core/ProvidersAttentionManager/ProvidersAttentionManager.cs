@@ -14,12 +14,12 @@ namespace FindServiceHN.Core.ProvidersAttentionManager
     {
          private readonly IRepository<ProvidersAttention> providersattentionRepository;
 
-        public Providers_AttentionManager(IRepository<ProvidersAttention> providersattentionRepository)
+        public ProvidersAttentionManager(IRepository<ProvidersAttention> providersattentionRepository)
         {
             this.providersattentionRepository = providersattentionRepository;
         }
 
-        public async Task<IEnumerable<Category>> GetAllAsync()
+        public async Task<IEnumerable<ProvidersAttention>> GetAllAsync()
         {
             return await this.providersattentionRepository.All().ToListAsync();
         }

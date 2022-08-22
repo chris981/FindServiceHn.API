@@ -9,6 +9,6 @@ namespace FindServiceHN.Core.QuotesDetailManager
 {
     public interface IQuotesDetailManager
     {
-        Task<IEnumerable<QuotesDetail>> GetAllAsyn();
+        Task<IEnumerable<QuotesDetail>> GetAllAsync();
     }
 }

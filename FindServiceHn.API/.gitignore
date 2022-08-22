@@ -353,3 +353,12 @@ MigrationBackup/
 /obj
 /debug
 .vs
+
+bin/
+obj/
+Debug/
+Release/
+
+./bin
+./obj
+./debug

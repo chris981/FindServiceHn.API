@@ -15,8 +15,8 @@ namespace FindServiceHn.API
             {
                 var testUsers = new List<User>
                 {
-                    new User { Id = 1, Username = "admin", PasswordHash = BCryptNet.HashPassword("admin"), Role = Role.Admin },
-                    new User { Id = 2, Username = "user", PasswordHash = BCryptNet.HashPassword("user"), Role = Role.User }
+                    new User { Id = 1, Email = "admin@admin.com", Name="admin Name", LastName="Admin LName", UserName = "admin", PasswordHash = BCryptNet.HashPassword("admin"), Role = Role.Admin },
+                    new User { Id = 2, Email = "user@admin.com", Name="user Name", LastName="User LName", UserName = "user", PasswordHash = BCryptNet.HashPassword("user"), Role = Role.User }
                 };
 
                 dataContext.Users.AddRange(testUsers);
