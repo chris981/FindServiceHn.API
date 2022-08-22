@@ -9,6 +9,10 @@ namespace FindServiceHN.Core.ServicesStatusManager
 {
     public interface IServicesStatusManager
     {
-        Task<IEnumerable<Services>> GetAllAsync();
+        Task<IEnumerable<ServicesStatus>> GetAllAsync();
+        Task<ServicesStatus> CreateServicesStatusAsync(ServicesStatusDTO servicesstatus);
+        Task<bool> DeleteServicesStatusAsync(int IdServicesStatus);
+        Task<ServicesStatus> UpdateUserAsync(ServicesStatus servicesstatus);
+        User GetById(int IdServicesStatus);
     }
 }
