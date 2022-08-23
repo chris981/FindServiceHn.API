@@ -10,5 +10,9 @@ namespace FindServiceHN.Core.QuotesDetailManager
     public interface IQuotesDetailManager
     {
         Task<IEnumerable<QuotesDetail>> GetAllAsync();
+        Task<QuotesDetail> CreateUserAsync(QuotesDetail quotesdetail);
+        Task<bool> DeleteUserAsync(int IdQuoteDetail);
+        Task<User> UpdateUserAsync(QuotesDetail quotesdetail);
+        User GetById(int IdQuoteDetail);
     }
 }

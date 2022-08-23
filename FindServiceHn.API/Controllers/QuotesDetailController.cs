@@ -26,5 +26,35 @@ namespace FindServiceHn.API.Controllers
 
             return Ok(quotesResult);
         }
+        //-----
+        
+        [AllowAnonymous]
+        [HttpPost("Create")]
+        public async Task<IActionResult> Post([FromBody] QuotesDetailDTO quotesdetail)
+        {
+            if(quotesdetail != null)
+            {
+                var result = await this.quotesdetailManager.CreateQuotesDetailAsync(quotesdetail);
+                return this.Ok(result);
+            }
+            return this.BadRequest();
+        }
+
+        [HttpPut("Update")]
+        public async Task<IActionResult> UpdateAsync([FromBody] QuotesDetail quotesdetail)
+        {
+            var result = await this.quotesdetailManager.UpdateQuotesDetailAsync(quotesdetail);
+            if(result != null)
+                return this.Accepted(quotesdetail);
+
+            return this.BadRequest();
+        }
+
+        [HttpDelete("Remove/{id}")]
+        public async Task<IActionResult> RemoveAsync(int IdQuoteDetail)
+        {
+            var result = await this.quotesdetailManager.DeleteQuotesDetailAsync(IdQuoteDetail);
+            return this.Ok(result);
+        }
     }
 }
