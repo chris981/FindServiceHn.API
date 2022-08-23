@@ -51,9 +51,9 @@ namespace FindServiceHn.API.Controllers
         }
 
         [HttpDelete("Remove/{id}")]
-        public async Task<IActionResult> RemoveAsync(int IdQuoteDetail)
+        public async Task<IActionResult> RemoveAsync(int id)
         {
-            var result = await this.quotesdetailManager.DeleteQuotesDetailAsync(IdQuoteDetail);
+            var result = await this.quotesdetailManager.DeleteQuotesDetailAsync(id);
             return this.Ok(result);
         }
     }

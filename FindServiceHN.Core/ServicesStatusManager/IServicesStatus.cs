@@ -12,9 +12,9 @@ namespace FindServiceHN.Core.ServicesStatusManager
         Task<IEnumerable<ServicesStatus>> GetAllAsync();
 
         Task<ServicesStatus> CreateServicesStatusAsync(ServicesStatusDTO servicesstatus);
-        Task<bool> DeleteServicesStatusAsync(int IdServicesStatus);
+        Task<bool> DeleteServicesStatusAsync(int id);
         Task<ServicesStatus> UpdateServicesStatusAsync(ServicesStatus servicesstatus);
-        ServicesStatus GetById(int IdServicesStatus);
+        ServicesStatus GetById(int id);
 
     }
 }

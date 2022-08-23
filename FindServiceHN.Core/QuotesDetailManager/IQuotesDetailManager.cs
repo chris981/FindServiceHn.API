@@ -11,8 +11,8 @@ namespace FindServiceHN.Core.QuotesDetailManager
     {
         Task<IEnumerable<QuotesDetail>> GetAllAsync();
         Task<QuotesDetail> CreateUserAsync(QuotesDetail quotesdetail);
-        Task<bool> DeleteUserAsync(int IdQuoteDetail);
+        Task<bool> DeleteUserAsync(int id);
         Task<User> UpdateUserAsync(QuotesDetail quotesdetail);
-        User GetById(int IdQuoteDetail);
+        User GetById(int id);
     }
 }

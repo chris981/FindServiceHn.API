@@ -7,7 +7,7 @@ namespace FindServiceHN.Core.QuotesHeaderManager
 {
     public class QuotesHeaderDTO
     {
-        public int IdQuoteHeader {get; set;}
+        //public int IdQuoteHeader {get; set;}
          public int IdQuoteDetail {get; set;}
 
          public int IdCustomer {get; set;}

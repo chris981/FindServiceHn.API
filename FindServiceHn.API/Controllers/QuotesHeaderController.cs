@@ -50,9 +50,9 @@ namespace FindServiceHn.API.Controllers
         }
 
         [HttpDelete("Remove/{id}")]
-        public async Task<IActionResult> RemoveAsync(int IdQuoteHeader)
+        public async Task<IActionResult> RemoveAsync(int id)
         {
-            var result = await this.quotesheaderManager.DeleteQuotesHeaderAsync(IdQuoteHeader);
+            var result = await this.quotesheaderManager.DeleteQuotesHeaderAsync(id);
             return this.Ok(result);
         }
     }

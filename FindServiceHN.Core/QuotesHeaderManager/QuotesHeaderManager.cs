@@ -26,18 +26,18 @@ namespace FindServiceHN.Core.QuotesHeaderManager
         {
             return await this.quotesheaderRepository.All().ToListAsync();
         }
-        public QuotesHeader GetById(int IdQuoteHeader)
+        public QuotesHeader GetById(int id)
         {
             var quotesheader = this.quotesheaderRepository.Find(IdQuoteHeader);
             if (quotesheader == null) throw new KeyNotFoundException("not found");
             return quotesheader;
         }
 
-        public async Task<bool> DeleteUQuotesHeaderAsync(int IdQuoteHeader)
+        public async Task<bool> DeleteUQuotesHeaderAsync(int id)
         {
             try
             {
-                var quotesheader = this.GetById(IdQuoteHeader);
+                var quotesheader = this.GetById(id);
                 this.quotesheaderRepository.Delete(quotesheader);
                 await this.quotesheaderRepository.SaveChangesAsync();
                 return true;

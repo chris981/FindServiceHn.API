@@ -26,14 +26,14 @@ namespace FindServiceHN.Core.QuotesDetailManager
             return await this.quotesdetailRepository.All().ToListAsync();
         }
 
-        public QuotesDetail GetById(int IdQuoteDetail)
+        public QuotesDetail GetById(int id)
         {
-            var quotesdetail = this.quotesdetailRepository.Find(IdQuoteDetail);
+            var quotesdetail = this.quotesdetailRepository.Find(id);
             if (quotesdetail == null) throw new KeyNotFoundException("not found");
             return quotesdetail;
         }
 
-        public async Task<bool> DeleteQuotesDetailAsync(int IdQuoteDetail)
+        public async Task<bool> DeleteQuotesDetailAsync(int id)
         {
             try
             {

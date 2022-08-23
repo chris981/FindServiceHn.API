@@ -29,18 +29,18 @@ namespace FindServiceHn.Core.ServicesStatusManager
             return await this.servicesstatusRepository.All().ToListAsync();
         }
 
-         public ServicesStatus GetById(int IdServicesStatus)
+         public ServicesStatus GetById(int id)
         {
-            var servicesstatus = this.servicesstatusRepository.Find(IdServicesStatus);
+            var servicesstatus = this.servicesstatusRepository.Find(id);
             if (servicesstatus == null) throw new KeyNotFoundException("not found");
             return servicesstatus;
         }
 
-        public async Task<bool> DeleteServicesStatusAsync(int IdServicesStatus)
+        public async Task<bool> DeleteServicesStatusAsync(int id)
         {
             try
             {
-                var servicesstatus = this.GetById(IdServicesStatus);
+                var servicesstatus = this.GetById(id);
                 this.servicesstatusRepository.Delete(servicesstatus);
                 await this.servicesstatusRepository.SaveChangesAsync();
                 return true;

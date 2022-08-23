@@ -52,12 +52,11 @@ namespace FindServiceHn.API.Controllers
         }
 
         [HttpDelete("Remove/{id}")]
-        public async Task<IActionResult> RemoveAsync(int IdServicesStatus)
+        public async Task<IActionResult> RemoveAsync(int id)
         {
-            var result = await this.servicesstatusManager.DeleteServicesStatusAsync(IdServicesStatus);
+            var result = await this.servicesstatusManager.DeleteServicesStatusAsync(id);
             return this.Ok(result);
-=======
->>>>>>> 4377ebe53d10aa63a2df4e60f81e3a1c0d1fb75e
+
         }
     }
 }
