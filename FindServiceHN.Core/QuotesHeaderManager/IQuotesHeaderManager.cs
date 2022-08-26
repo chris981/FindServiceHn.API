@@ -8,6 +8,10 @@ namespace FindServiceHN.Core.Quotes_HeaderManager
 {
     public interface IQuotesHeaderManager
     {
-         Task<IEnumerable<QuotesHeader>> GetAllAsync();
+        Task<IEnumerable<QuotesHeader>> GetAllAsync();
+        Task<QuotesHeader> CreateQuotesHeaderAsync(QuotesHeaderDTO quotesheader);
+        Task<bool> DeleteQuotesHeaderAsync(int id);
+        Task<QuotesHeader> UpdateQuotesHeaderAsync(QuotesHeader quotesheader);
+        QuotesHeader GetById(int id)
     }
 }

@@ -11,6 +11,10 @@ namespace FindServiceHN.Core.ProvidersAttentionManager
     {
         
         Task<IEnumerable<ProvidersAttention>> GetAllAsync();
+        Task<ProvidersAttention> CreateProvidersAttentionAsync(ProvidersAttentionDTO providersattention);
+        Task<bool> DeleteProvidersAttentionAsync(int id);
+        Task<ProvidersAttention> UpdateProvidersAttentionAsync(ProvidersAttention providersattention);
+        ProvidersAttention GetById(int id);
     
     }
 }
