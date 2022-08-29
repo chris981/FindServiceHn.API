@@ -10,5 +10,9 @@ namespace FindServiceHN.Core.CustomersManager
     public interface ICustomersManager
     {
         Task<IEnumerable<Customers>> getAllAsync();
+        Task<Customers> CreateCustomerAsync(CustomersDTO custumers);
+        Task<bool> DeleteCustomerAsync(int id);
+        Task<Customers> UpdateCustomerAsync(Customers customer);
+        Customers GetById(int id);
     }
 }

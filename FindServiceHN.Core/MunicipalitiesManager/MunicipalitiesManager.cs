@@ -21,5 +21,72 @@ namespace FindServiceHN.Core.MunicipalitiesManager
         {
             return await this.MunicipalitiesRepository.All().ToListAsync();
         }
+        public Municipalities GetById(int id)
+        {
+            var municipality = this.MunicipalitiesRepository.Find(id);
+            if (municipality == null) throw new KeyNotFoundException("not found");
+            return municipality;
+        }
+        public async Task<bool> DeleteMunicipalityAsync(int id)
+        {
+            try
+            {
+                var municipality = this.GetById(id);
+                this.MunicipalitiesRepository.Delete(municipality);
+                await this.MunicipalitiesRepository.SaveChangesAsync();
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+        }
+        public async Task<Municipalities> UpdateMunicipalityAsync(Municipalities municipalities)
+        {
+            try
+            {
+                var MunicipalityToEdit = this.GetById(municipalities.IdMunicipality);
+                MunicipalityToEdit.IdMunicipality = municipalities.IdMunicipality;
+                MunicipalityToEdit.IdDeparment = municipalities.IdDeparment;
+                MunicipalityToEdit.IdCountry = municipalities.IdCountry;
+                MunicipalityToEdit.Description = municipalities.Description;
+                MunicipalityToEdit.CreationDate = municipalities.CreationDate;
+                MunicipalityToEdit.IdUserCreation = MunicipalityToEdit.IdUserCreation;
+                MunicipalityToEdit.IdStatus = municipalities.IdStatus;
+
+                var result = this.MunicipalitiesRepository.Update(MunicipalityToEdit);
+                await this.MunicipalitiesRepository.SaveChangesAsync();
+                return result;
+
+            }
+            catch (Exception ex)
+            {
+
+                return null;
+            }
+        }
+        public async Task<Municipalities> CreateDepartmentAsync(MunicipalitiesDTO municipalities)
+        {
+            if (municipalities != null)
+            {
+                var newMunicipality = new Municipalities
+                {
+                    IdMunicipality = municipalities.IdMunicipality,
+                    IdDeparment = municipalities.IdDeparment,
+                    IdCountry = municipalities.IdCountry,
+                    Description = municipalities.Description,
+                    CreationDate = municipalities.CreationDate,
+                    IdUserCreation = municipalities.IdUserCreation,
+                    IdStatus = municipalities.IdStatus,
+                };
+
+                var result = this.MunicipalitiesRepository.Create(newMunicipality);
+                await this.MunicipalitiesRepository.SaveChangesAsync();
+                return result;
+            }
+            return null;
+        }
     }
 }
