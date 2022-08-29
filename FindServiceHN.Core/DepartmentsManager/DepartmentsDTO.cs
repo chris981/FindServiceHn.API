@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FindServiceHn.Database.Models
+namespace FindServiceHN.Core.DepartmentsManager
 {
-    public class Departments
+    public class DepartmentsDTO
     {
         public int IdCountry { get; set; }
         public int IdDepartment { get; set; }

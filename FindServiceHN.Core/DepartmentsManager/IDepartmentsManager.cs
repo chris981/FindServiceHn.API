@@ -10,5 +10,9 @@ namespace FindServiceHN.Core.DepartmentsManager
     public interface IDepartmentsManager
     {
         Task<IEnumerable<Departments>> GetAllAsync();
+        Task<Departments> CreateDepartmentAsync(DepartmentsDTO departments);
+        Task<bool> DeleteDepartmentAsync(int id);
+        Task<Departments> UpdateDepartmentAsync(Departments departments);
+        Departments GetById(int id);
     }
 }

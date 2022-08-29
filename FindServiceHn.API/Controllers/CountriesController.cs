@@ -1,4 +1,6 @@
-﻿using FindServiceHN.Core.CountriesManager;
+﻿using FindServiceHn.Database.Models;
+using FindServiceHN.Core.Authentication;
+using FindServiceHN.Core.CountriesManager;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,6 +25,34 @@ namespace FindServiceHn.API.Controllers
                 return NotFound();
             }
             return Ok(countriesResult);
+        }
+        [AllowAnonymous]
+        [HttpPost("Create")]
+        public async Task<IActionResult> Post([FromBody] CountriesDTO countries)
+        {
+            if (countries != null)
+            {
+                var result = await this.countriesManager.CreateCountryAsync(countries);
+                return this.Ok(result);
+            }
+            return this.BadRequest();
+        }
+
+        [HttpPut("Update")]
+        public async Task<IActionResult> UpdateAsync([FromBody] Countries countries)
+        {
+            var result = await this.countriesManager.UpdateCountry(countries);
+            if (result != null)
+                return this.Accepted(countries);
+
+            return this.BadRequest();
+        }
+
+        [HttpDelete("Remove/{id}")]
+        public async Task<IActionResult> RemoveAsync(int id)
+        {
+            var result = await this.countriesManager.DeleteCountryAsync(id);
+            return this.Ok(result);
         }
     }
 }

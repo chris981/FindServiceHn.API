@@ -9,6 +9,10 @@ namespace FindServiceHN.Core.CustomerAddressManager
 {
     public interface ICustomerAddressManager
     {
-        Task<IEnumerable<CustomerAddressManager>> GetAllAsync();
+        Task<IEnumerable<CustomerAddress>> GetAllAsync();
+        Task<CustomerAddress> CreateCustomerAddressAsync(CustomerAddressDTO customerAddress);
+        Task<bool> DeleteCustomerAddressAsync(int id);
+        Task<CustomerAddress> UpdateCustomerAddressAsync(CustomerAddress customerAddress);
+        CustomerAddress GetById(int id);
     }
 }
