@@ -12,7 +12,7 @@ namespace FindServiceHN.Core.ProviderManager
     public interface IProviderManager
     {
         #region"provider "
-        IEnumerable<Provider> GetAll();
+        Task<IEnumerable<Provider>> GetAllAsync();
         Task<Provider> CreateProviderAsync(ProviderDTO provider);
         Task<bool> DeleteProviderAsync(int id);
         Task<Provider> UpdateProviderAsync(Provider provider);
@@ -20,7 +20,7 @@ namespace FindServiceHN.Core.ProviderManager
         #endregion
 
         #region"providerplanjob"
-        IEnumerable<ProviderPlanJob> GetProviderPlanJob();
+        Task<IEnumerable<ProviderPlanJob>> GetProviderPlanJobAsync();
         Task<ProviderPlanJob> CreateProviderPlanJobAsync(ProviderPlanJobDTO providerPlanJob);
 
         Task<bool> DeleteProviderPlanJobAsync(int id);
@@ -29,7 +29,7 @@ namespace FindServiceHN.Core.ProviderManager
         #endregion
 
         #region"provider service"
-        IEnumerable<ProviderService> GetAllProviderService();
+        Task<IEnumerable<ProviderService>> GetAllProviderServiceAsync();
         Task<ProviderService> CreateProviderServiceAsync(ProviderServiceDTO providerService);
         Task<bool> DeleteProviderServiceAsync(int id);
         Task <ProviderService> UpdateProviderServiceAsync(ProviderService providerService);
@@ -37,7 +37,7 @@ namespace FindServiceHN.Core.ProviderManager
         #endregion
 
         #region"providerEval"
-        IEnumerable<ProviderEval> GetProviderEval();
+        Task<IEnumerable<ProviderEval>> GetProviderEvalAsync();
         Task <ProviderEval> CreateProviderEvalAsync(ProviderEvalDTO providerEval);
 
         Task<bool>DeleteProviderEvalAsync(int id);

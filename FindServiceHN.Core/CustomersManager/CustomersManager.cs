@@ -86,7 +86,6 @@ namespace FindServiceHN.Core.CustomersManager
             {
                 var newCustomer = new Customers
                 {
-                    IdCustomer = customers.IdCustomer,
                     emailpassword = customers.emailpassword,
                     Rtn = customers.Rtn,
                     Identificationcard = customers.Identificationcard,

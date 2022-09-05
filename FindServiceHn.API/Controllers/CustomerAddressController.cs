@@ -41,7 +41,7 @@ namespace FindServiceHn.API.Controllers
         [HttpPut("Update")]
         public async Task<IActionResult> UpdateAsync([FromBody] CustomerAddress customerAddress)
         {
-            var result = await this.customerAddressManager.UpdateCustomerAddress(customerAddress);
+            var result = await this.customerAddressManager.UpdateCustomerAddressAsync(customerAddress);
             if (result != null)
                 return this.Accepted(customerAddress);
 

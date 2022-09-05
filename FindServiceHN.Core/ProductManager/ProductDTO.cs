@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FindServiceHn.Database.Models
+namespace FindServiceHN.Core.ProductManager
 {
-    public class Product
+    public class ProductDTO
     {
-        public int IdProduct { get; set; }
         public int IdProvider { get; set; }
         public int IdCategory { get; set; }
         public string Name { get; set; }

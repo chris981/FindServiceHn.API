@@ -15,24 +15,15 @@ namespace FindServiceHN.Core.OrderStatusManager
 	public class OrderStatusManager : IOrderStatusManager
 	{
         private IRepository<OrderStatus> orderStatusRepository;
-        private IJwtUtils _jwtUtils;
-        private readonly AppSettings _appSettings;
 
-        public OrderStatusManager(
-            IRepository<OrderStatus> orderStatusRepository,
-            IJwtUtils jwtUtils,
-            IOptions<AppSettings> appSettings)
+        public OrderStatusManager(IRepository<OrderStatus> orderStatusRepository)
         {
             this.orderStatusRepository = orderStatusRepository;
-            _jwtUtils = jwtUtils;
-            _appSettings = appSettings.Value;
         }
 
-
-
-        public IEnumerable<OrderStatus> GetAll()
+        public async Task<IEnumerable<OrderStatus>> GetAllAsync()
         {
-            return this.orderStatusRepository.All();
+            return await this.orderStatusRepository.All().ToListAsync();
         }
 
         public OrderStatus GetById(int id)

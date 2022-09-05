@@ -3,6 +3,7 @@ using FindServiceHn.Database.Repositories;
 using FindServiceHN.Core.Authentication;
 using FindServiceHN.Core.Models;
 using FindServiceHN.Core.UserManager;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
 namespace FindServiceHN.Core.OrderDetailManager
@@ -10,24 +11,16 @@ namespace FindServiceHN.Core.OrderDetailManager
 	public class OrderDetailManager : IOrderDetailManager
 	{
         private IRepository<OrderDetail> orderDetailRepository;
-        private IJwtUtils _jwtUtils;
-        private readonly AppSettings _appSettings;
 
         public OrderDetailManager(
-            IRepository<OrderDetail> orderDetailRepository,
-            IJwtUtils jwtUtils,
-            IOptions<AppSettings> appSettings)
+            IRepository<OrderDetail> orderDetailRepository)
         {
             this.orderDetailRepository = orderDetailRepository;
-            _jwtUtils = jwtUtils;
-            _appSettings = appSettings.Value;
         }
 
-               
-
-        public IEnumerable<OrderDetail> GetAll()
+        public async Task<IEnumerable<OrderDetail>> GetAllAsync()
         {
-            return this.orderDetailRepository.All();
+            return await this.orderDetailRepository.All().ToListAsync();
         }
 
         public OrderDetail GetById(int id)

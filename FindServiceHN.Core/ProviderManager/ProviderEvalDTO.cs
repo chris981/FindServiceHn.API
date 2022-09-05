@@ -8,7 +8,6 @@ namespace FindServiceHN.Core.ProviderManager
 {
     public class ProviderEvalDTO
     {
-        public int IdEval { get; set; }
         public string Email { get; set; }
         public string Company { get; set; }
         public string Name { get; set; }

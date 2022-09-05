@@ -8,7 +8,6 @@ namespace FindServiceHN.Core.CustomerAddressManager
 {
     public class CustomerAddressDTO
     {
-        public int IdCustomerAddress { get; set; }
         public int IdCustomer { get; set; }
         public int IdCountry { get; set; }
         public int IdDeparment { get; set; }

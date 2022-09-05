@@ -12,7 +12,7 @@ namespace FindServiceHn.Database.Models
      public int IdProviderAttention {get; set;}
      public string Description {get; set;}
      public string TypeAttention {get; set;}
-     public int IStatus {get; set;}
+     public int IdStatus {get; set;}
      public DateTime CreationDate {get; set;}
         
     }

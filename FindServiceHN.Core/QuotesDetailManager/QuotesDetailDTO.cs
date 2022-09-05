@@ -7,8 +7,6 @@ namespace FindServiceHN.Core.QuotesDetailManager
 {
     public class QuotesDetailDTO
     {
-       // public int IdQuoteDetail { get; set; }
-
         public int IdCustomer { get; set; }
         public int IdProvider { get; set; }
         public string Line { get; set; }

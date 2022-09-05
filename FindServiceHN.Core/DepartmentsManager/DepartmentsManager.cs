@@ -72,7 +72,6 @@ namespace FindServiceHN.Core.DepartmentsManager
             {
                 var newDepartment = new Departments
                 {
-                    IdDepartment = departments.IdDepartment,
                     IdCountry = departments.IdCountry,
                     Description = departments.Description,
                     CreatedDate = departments.CreatedDate,

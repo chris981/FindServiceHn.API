@@ -9,7 +9,7 @@ namespace FindServiceHN.Core.OrderDetailManager
 {
     public class OrderDetailDTO
     {
-        
+
         public int IdCustomer { get; set; }
         public int IdProvider { get; set; }
         public string Line { get; set; }

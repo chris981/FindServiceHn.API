@@ -3,6 +3,7 @@ using FindServiceHn.Database.Repositories;
 using FindServiceHN.Core.Authentication;
 using FindServiceHN.Core.Models;
 using FindServiceHN.Core.UserManager;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
 namespace FindServiceHN.Core.OrderSatisfactionManager
@@ -10,24 +11,16 @@ namespace FindServiceHN.Core.OrderSatisfactionManager
 	public class OrderSatisfactionManager : IOrderSatisfactionManager
 	{
         private IRepository<OrderSatisfaction> orderSatisfactionRepository;
-        private IJwtUtils _jwtUtils;
-        private readonly AppSettings _appSettings;
 
-        public OrderSatisfactionManager(
-            IRepository<OrderSatisfaction> orderSatisfactionRepository,
-            IJwtUtils jwtUtils,
-            IOptions<AppSettings> appSettings)
+        public OrderSatisfactionManager(IRepository<OrderSatisfaction> orderSatisfactionRepository)
         {
             this.orderSatisfactionRepository = orderSatisfactionRepository;
-            _jwtUtils = jwtUtils;
-            _appSettings = appSettings.Value;
         }
 
 
-
-        public IEnumerable<OrderSatisfaction> GetAll()
+        public async Task<IEnumerable<OrderSatisfaction>> GetAllAsync()
         {
-            return this.orderSatisfactionRepository.All();
+            return await this.orderSatisfactionRepository.All().ToListAsync();
         }
 
         public OrderSatisfaction GetById(int id)

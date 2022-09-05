@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FindServiceHN.Core.DepartmentsManager
+namespace FindServiceHN.Core.CategoryManager
 {
-    public class DepartmentsDTO
+    public class CategoryDTO
     {
-        public int IdCountry { get; set; }
         public string Description { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreationDate { get; set; }
         public int IdUserCreation { get; set; }
-        public string Condition { get; set; }
+        public int IdStatus { get; set; }
+        public string Image { get; set; }
     }
 }

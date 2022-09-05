@@ -74,7 +74,6 @@ namespace FindServiceHN.Core.CustomerAddressManager
             {
                 var newCustomerAddress = new CustomerAddress
                 {
-                    IdCustomerAddress = customerAddress.IdCustomerAddress,
                     IdCustomer = customerAddress.IdCustomer,
                     IdCountry = customerAddress.IdCountry,
                     IdDeparment = customerAddress.IdDeparment,

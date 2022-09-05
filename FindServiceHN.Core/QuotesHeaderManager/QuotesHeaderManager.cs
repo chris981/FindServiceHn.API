@@ -10,16 +10,14 @@ using System.Threading.Tasks;
 
 namespace FindServiceHN.Core.QuotesHeaderManager
 {
-    public class QuotesHeaderManager
+    public class QuotesHeaderManager : IQuotesHeaderManager
     {
         private readonly IRepository<QuotesHeader> quotesheaderRepository;
 
-        public QuotesHeaderManager(IRepository<QuotesHeader> quotesheaderRepository, IJwtUtils jwtUtils,
-            IOptions<AppSettings> appSettings)
+        public QuotesHeaderManager(IRepository<QuotesHeader> quotesheaderRepository)
         {
             this.quotesheaderRepository = quotesheaderRepository;
-            _jwtUtils = jwtUtils;
-            _appSettings = appSettings.Value;
+
         }
 
         public async Task<IEnumerable<QuotesHeader>> GetAllAsync()
@@ -28,12 +26,12 @@ namespace FindServiceHN.Core.QuotesHeaderManager
         }
         public QuotesHeader GetById(int id)
         {
-            var quotesheader = this.quotesheaderRepository.Find(IdQuoteHeader);
+            var quotesheader = this.quotesheaderRepository.Find(id);
             if (quotesheader == null) throw new KeyNotFoundException("not found");
             return quotesheader;
         }
 
-        public async Task<bool> DeleteUQuotesHeaderAsync(int id)
+        public async Task<bool> DeleteQuotesHeaderAsync(int id)
         {
             try
             {

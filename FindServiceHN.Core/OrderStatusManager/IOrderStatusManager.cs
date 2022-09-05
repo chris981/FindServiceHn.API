@@ -10,7 +10,7 @@ namespace FindServiceHN.Core.OrderStatusManager
 {
 	public interface IOrderStatusManager
 	{
-        IEnumerable<OrderStatus> GetAll();
+        Task<IEnumerable<OrderStatus>> GetAllAsync();
         Task<OrderStatus> CreateOrderStatusAsync(OrderStatusDTO orderStatus);
         Task<bool> DeleteOrderStatusAsync(int id);
         Task<OrderStatus> UpdateOrderStatusAsync(OrderStatus orderStatus);

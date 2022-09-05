@@ -14,12 +14,9 @@ namespace FindServiceHN.Core.ProvidersAttentionManager
     {
          private readonly IRepository<ProvidersAttention> providersattentionRepository;
 
-        public ProvidersAttentionManager(IRepository<ProvidersAttention> providersattentionRepository, IJwtUtils jwtUtils,
-            IOptions<AppSettings> appSettings)
+        public ProvidersAttentionManager(IRepository<ProvidersAttention> providersattentionRepository)
         {
             this.providersattentionRepository = providersattentionRepository;
-            _jwtUtils = jwtUtils;
-            _appSettings = appSettings.Value;
         }
 
         public async Task<IEnumerable<ProvidersAttention>> GetAllAsync()
@@ -57,7 +54,7 @@ namespace FindServiceHN.Core.ProvidersAttentionManager
                 var providersattentionToEdit = this.GetById(providersattention.IdProviderAttention);
                 providersattentionToEdit.Description = providersattentionToEdit.Description;
                 providersattentionToEdit.TypeAttention = providersattentionToEdit.TypeAttention;
-                providersattentionToEdit.IStatus = providersattentionToEdit.IStatus;
+                providersattentionToEdit.IdStatus = providersattentionToEdit.IdStatus;
                 providersattentionToEdit.CreationDate = providersattentionToEdit.CreationDate;
                 
 
@@ -79,7 +76,7 @@ namespace FindServiceHN.Core.ProvidersAttentionManager
                 {
                     Description = providersattention.Description,
                     TypeAttention = providersattention.TypeAttention,
-                    IStatus = providersattention.IStatus,
+                    IdStatus = providersattention.IdStatus,
                     CreationDate = providersattention.CreationDate,
                     
                 };

@@ -11,7 +11,7 @@ namespace FindServiceHn.Database.Models
         public int IdCategory { get; set; }
         public string Description { get; set; }
         public DateTime CreationDate { get; set; }
-        public int CreatedBy { get; set; }
+        public int IdUserCreation { get; set; }
         public int IdStatus { get; set; }
         public string Image { get; set; }
     }
