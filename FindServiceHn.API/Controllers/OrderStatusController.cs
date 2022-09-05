@@ -23,7 +23,7 @@ namespace FindServiceHn.API.Controllers
             {
                 return NotFound();
             }
-            return this.Ok();
+            return this.Ok(orderStatusResult);
         }
 
         
