@@ -10,42 +10,42 @@ namespace FindServiceHn.API.Controllers
     [ApiController]
     public class SubCategoryController : ControllerBase
     {
-        private readonly ISubCategoriesManager subcategoryManager;
+        private readonly ISubCategoriesManager subCategoryManager;
 
-        public SubCategoryController(ISubCategoriesManager subcategoryManager)
+        public SubCategoryController(ISubCategoriesManager subCategoryManager)
         {
-            this.subcategoryManager = subcategoryManager;
+            this.subCategoryManager = subCategoryManager;
         }
 
         [HttpGet("GetSubCategories")]
         public async Task<IActionResult> GetAsync()
         {
-            var categoriesResult = await subcategoryManager.GetAllAsync();
-            if(!categoriesResult.Any())
+            var subCategoriesResult = await subCategoryManager.GetAllAsync();
+            if(!subCategoriesResult.Any())
             {
                 return NotFound();
             }
 
-            return Ok(categoriesResult);
+            return Ok(subCategoriesResult);
         }
         [AllowAnonymous]
         [HttpPost("Create")]
-        public async Task<IActionResult> Post([FromBody] SubCategoriesDTO subcategory)
+        public async Task<IActionResult> Post([FromBody] SubCategoriesDTO subCategory)
         {
-            if (subcategory != null)
+            if (subCategory != null)
             {
-                var result = await this.subcategoryManager.CreateSubCategoriesAsync(subcategory);
+                var result = await this.subCategoryManager.CreateSubCategoriesAsync(subCategory);
                 return this.Ok(result);
             }
             return this.BadRequest();
         }
 
         [HttpPut("Update")]
-        public async Task<IActionResult> UpdateAsync([FromBody] SubCategory subcategories)
+        public async Task<IActionResult> UpdateAsync([FromBody] SubCategory subCategory)
         {
-            var result = await this.subcategoryManager.UpdateSubCategoriesAsync(subcategories);
+            var result = await this.subCategoryManager.UpdateSubCategoriesAsync(subCategory);
             if (result != null)
-                return this.Accepted(subcategories);
+                return this.Accepted(subCategory);
 
             return this.BadRequest();
         }
@@ -53,7 +53,7 @@ namespace FindServiceHn.API.Controllers
         [HttpDelete("Remove/{id}")]
         public async Task<IActionResult> RemoveAsync(int id)
         {
-            var result = await this.subcategoryManager.DeleteSubCategoriesAsync(id);
+            var result = await this.subCategoryManager.DeleteSubCategoriesAsync(id);
             return this.Ok(result);
         }
     }

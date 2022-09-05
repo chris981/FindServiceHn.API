@@ -10,42 +10,42 @@ namespace FindServiceHn.API.Controllers
     [ApiController]
     public class DayHourController : ControllerBase
     {
-        private readonly IDayHoursManager dayhoursManager;
+        private readonly IDayHoursManager dayHoursManager;
 
-        public DayHourController(IDayHoursManager dayhoursManager)
+        public DayHourController(IDayHoursManager dayHoursManager)
         {
-            this.dayhoursManager = dayhoursManager;
+            this.dayHoursManager = dayHoursManager;
         }
 
         [HttpGet("GetDayHours")]
         public async Task<IActionResult> GetAsync()
         {
-            var dayhoursResult = await dayhoursManager.GetAllAsync();
-            if(!dayhoursResult.Any())
+            var dayHoursResult = await dayHoursManager.GetAllAsync();
+            if(!dayHoursResult.Any())
             {
                 return NotFound();
             }
 
-            return Ok(dayhoursResult);
+            return Ok(dayHoursResult);
         }
         [AllowAnonymous]
         [HttpPost("Create")]
-        public async Task<IActionResult> Post([FromBody] DayHoursDTO dayhours)
+        public async Task<IActionResult> Post([FromBody] DayHoursDTO dayHours)
         {
-            if (dayhours != null)
+            if (dayHours != null)
             {
-                var result = await this.dayhoursManager.CreateDayHoursAsync(dayhours);
+                var result = await this.dayHoursManager.CreateDayHoursAsync(dayHours);
                 return this.Ok(result);
             }
             return this.BadRequest();
         }
 
         [HttpPut("Update")]
-        public async Task<IActionResult> UpdateAsync([FromBody] DayHour dayhours)
+        public async Task<IActionResult> UpdateAsync([FromBody] DayHour dayHours)
         {
-            var result = await this.dayhoursManager.UpdateDayHoursAsync(dayhours);
+            var result = await this.dayHoursManager.UpdateDayHoursAsync(dayHours);
             if (result != null)
-                return this.Accepted(dayhours);
+                return this.Accepted(dayHours);
 
             return this.BadRequest();
         }
@@ -53,7 +53,7 @@ namespace FindServiceHn.API.Controllers
         [HttpDelete("Remove/{id}")]
         public async Task<IActionResult> RemoveAsync(int id)
         {
-            var result = await this.dayhoursManager.DeleteDayHoursAsync(id);
+            var result = await this.dayHoursManager.DeleteDayHoursAsync(id);
             return this.Ok(result);
         }
     }
