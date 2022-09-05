@@ -96,10 +96,10 @@ namespace FindServiceHn.Database
                 .HasKey(s => s.IdMunicipality);
 
             modelBuilder.Entity<SubCategory>()
-                .HasKey(s => s.Id);
+                .HasKey(s => s.IdSubCategories);
 
             modelBuilder.Entity<DayHour>()
-                .HasKey(s => s.Id);
+                .HasKey(s => s.IdHour);
 
             modelBuilder.Entity<OrderHeader>()
                 .HasKey(s => s.IdOrder);
