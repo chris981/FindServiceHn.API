@@ -10,7 +10,7 @@ namespace FindServiceHn.Database.Models
     public class ServicesStatus
     {
         public int IdServicesStatus { get; set; }
-        public string IStatus { get; set; }
+        public string IdStatus { get; set; }
         public string Description { get; set; }
 
         

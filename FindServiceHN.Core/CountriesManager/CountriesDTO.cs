@@ -8,7 +8,6 @@ namespace FindServiceHN.Core.CountriesManager
 {
     public class CountriesDTO
     {
-        public int IdCountry { get; set; }
         public string Name { get; set; }
         public int CountryCode { get; set; }
         public int IdStatus { get; set; }

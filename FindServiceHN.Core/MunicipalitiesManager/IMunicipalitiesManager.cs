@@ -13,6 +13,6 @@ namespace FindServiceHN.Core.MunicipalitiesManager
         Task<Municipalities> CreateMunicipalityAsync(MunicipalitiesDTO municipalities);
         Task<bool> DeleteMunicipalityAsync(int id);
         Task<Municipalities> UpdateMunicipalityAsync(Municipalities municipalities);
-        Municipalities GetyById(int id);
+        Municipalities GetById(int id);
     }
 }

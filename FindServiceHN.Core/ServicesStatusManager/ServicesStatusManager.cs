@@ -14,14 +14,9 @@ namespace FindServiceHn.Core.ServicesStatusManager
     {
         private readonly IRepository<ServicesStatus> servicesstatusRepository;
 
-        public ServicesStatusManager(IRepository<ServicesStatus> servicesstatusRepository,
-             IJwtUtils jwtUtils,
-             IOptions<AppSettings> appSettings)
+        public ServicesStatusManager(IRepository<ServicesStatus> servicesstatusRepository)
         {
             this.servicesstatusRepository = servicesstatusRepository;
-            _jwtUtils = jwtUtils;
-            _appSettings = appSettings.Value;
-
         }
 
         public async Task<IEnumerable<ServicesStatus>> GetAllAsync()
@@ -57,7 +52,7 @@ namespace FindServiceHn.Core.ServicesStatusManager
             try
             {
                 var serivcesstatusToEdit = this.GetById(servicesstatus.IdServicesStatus);
-                serivcesstatusToEdit.IStatus = servicesstatus.IStatus;
+                serivcesstatusToEdit.IdStatus = servicesstatus.IdStatus;
                 serivcesstatusToEdit.Description = servicesstatus.Description;
 
                 var result = this.servicesstatusRepository.Update(serivcesstatusToEdit);
@@ -76,7 +71,7 @@ namespace FindServiceHn.Core.ServicesStatusManager
             {
                 var newservicesstatus = new ServicesStatus 
                 {
-                    IStatus = servicesstatus.IStatus,
+                    IdStatus = servicesstatus.IdStatus,
                     Description = servicesstatus.Description,
                    
                 };

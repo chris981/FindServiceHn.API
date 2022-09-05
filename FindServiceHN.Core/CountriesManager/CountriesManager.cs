@@ -73,7 +73,6 @@ namespace FindServiceHN.Core.CountriesManager
             {
                 var newCountry = new Countries
                 {
-                   IdCountry = countries.IdCountry,
                    Name = countries.Name,
                    CountryCode = countries.CountryCode,
                    IdStatus = countries.IdStatus,

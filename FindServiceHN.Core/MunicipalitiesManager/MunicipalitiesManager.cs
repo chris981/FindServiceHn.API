@@ -67,13 +67,12 @@ namespace FindServiceHN.Core.MunicipalitiesManager
                 return null;
             }
         }
-        public async Task<Municipalities> CreateDepartmentAsync(MunicipalitiesDTO municipalities)
+        public async Task<Municipalities> CreateMunicipalityAsync(MunicipalitiesDTO municipalities)
         {
             if (municipalities != null)
             {
                 var newMunicipality = new Municipalities
                 {
-                    IdMunicipality = municipalities.IdMunicipality,
                     IdDeparment = municipalities.IdDeparment,
                     IdCountry = municipalities.IdCountry,
                     Description = municipalities.Description,

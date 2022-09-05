@@ -1,4 +1,6 @@
-﻿using FindServiceHN.Core.QuotesDetailManager;
+﻿using FindServiceHn.Database.Models;
+using FindServiceHN.Core.Authentication;
+using FindServiceHN.Core.QuotesDetailManager;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,7 +28,6 @@ namespace FindServiceHn.API.Controllers
 
             return Ok(quotesResult);
         }
-        //-----
         
         [AllowAnonymous]
         [HttpPost("Create")]

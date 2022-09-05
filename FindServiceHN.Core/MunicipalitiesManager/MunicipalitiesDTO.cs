@@ -10,7 +10,6 @@ namespace FindServiceHN.Core.MunicipalitiesManager
     {
         public int IdCountry { get; set; }
         public int IdDeparment { get; set; }
-        public int IdMunicipality { get; set; }
         public string Description { get; set; }
         public DateTime CreationDate { get; set; }
         public int IdUserCreation { get; set; }

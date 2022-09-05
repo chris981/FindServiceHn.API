@@ -12,7 +12,7 @@ namespace FindServiceHN.Core.OrderSatisfactionManager
 {
 	public interface IOrderSatisfactionManager
 	{
-        IEnumerable<OrderSatisfaction> GetAll();
+        Task<IEnumerable<OrderSatisfaction>> GetAllAsync();
         Task<OrderSatisfaction> CreateOrderSatisfactionAsync(OrderSatisfactionDTO orderSatisfaction);
         Task<bool> DeleteOrderSatisfactionAsync(int id);
         Task<OrderSatisfaction> UpdateOrderSatisfactionAsync(OrderSatisfaction orderSatisfaction);

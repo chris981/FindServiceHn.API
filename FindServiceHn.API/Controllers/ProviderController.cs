@@ -20,7 +20,7 @@ namespace FindServiceHn.API.Controllers
 
         public IActionResult GetAll()
         {
-            return this.Ok(this.ProviderManager.GetAll());
+            return this.Ok(this.ProviderManager.GetAllAsync());
         }
 
         [AllowAnonymous]
@@ -60,7 +60,7 @@ namespace FindServiceHn.API.Controllers
 
         public IActionResult GetProviderPlanJob()
         {
-            return this.Ok(this.ProviderManager.GetAll());
+            return this.Ok(this.ProviderManager.GetAllAsync());
         }
         [AllowAnonymous]
         [HttpPost("CreatePlanJob")]
@@ -96,7 +96,7 @@ namespace FindServiceHn.API.Controllers
 
         public IActionResult GetProviderService()
         {
-            return this.Ok(this.ProviderManager.GetAll());
+            return this.Ok(this.ProviderManager.GetAllAsync());
         }
         [AllowAnonymous]
         [HttpPost("CreateService")]
@@ -134,7 +134,7 @@ namespace FindServiceHn.API.Controllers
 
         public IActionResult GetProviderEval()
         {
-            return this.Ok(this.ProviderManager.GetAll());
+            return this.Ok(this.ProviderManager.GetAllAsync());
         }
         [AllowAnonymous]
         [HttpPost("CreateProviderEval")]

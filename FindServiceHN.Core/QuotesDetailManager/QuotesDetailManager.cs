@@ -13,12 +13,9 @@ namespace FindServiceHN.Core.QuotesDetailManager
     {
         private readonly IRepository<QuotesDetail> quotesdetailRepository;
 
-        public QuotesDetailManager(IRepository<QuotesDetail> quotesdetailRepository, IJwtUtils jwtUtils,
-            IOptions<AppSettings> appSettings)
+        public QuotesDetailManager(IRepository<QuotesDetail> quotesdetailRepository)
         {
             this.quotesdetailRepository = quotesdetailRepository;
-            _jwtUtils = jwtUtils;
-            _appSettings = appSettings.Value;
         }
 
         public async Task<IEnumerable<QuotesDetail>> GetAllAsync()
@@ -37,7 +34,7 @@ namespace FindServiceHN.Core.QuotesDetailManager
         {
             try
             {
-                var quotesdetail = this.GetById(IdQuoteDetail);
+                var quotesdetail = this.GetById(id);
                 this.quotesdetailRepository.Delete(quotesdetail);
                 await this.quotesdetailRepository.SaveChangesAsync();
                 return true;
@@ -72,7 +69,7 @@ namespace FindServiceHN.Core.QuotesDetailManager
             }
         }
 
-        public async Task<QuotesDetail> CreateQuotesDetailAsync(QuotesDetail quotesdetail)
+        public async Task<QuotesDetail> CreateQuotesDetailAsync(QuotesDetailDTO quotesdetail)
         {
             if (quotesdetail != null)
             {

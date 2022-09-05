@@ -1,4 +1,6 @@
-﻿using FindServiceHN.Core.ServicesStatusManager;
+﻿using FindServiceHn.Database.Models;
+using FindServiceHN.Core.Authentication;
+using FindServiceHN.Core.ServicesStatusManager;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,7 +27,6 @@ namespace FindServiceHn.API.Controllers
             }
 
             return Ok(servicesStatusResult);
-<<<<<<< HEAD
         }
 
         
@@ -54,7 +55,7 @@ namespace FindServiceHn.API.Controllers
         [HttpDelete("Remove/{id}")]
         public async Task<IActionResult> RemoveAsync(int id)
         {
-            var result = await this.servicesstatusManager.DeleteServicesStatusAsync(id);
+            var result = await this.servicesStatusManager.DeleteServicesStatusAsync(id);
             return this.Ok(result);
 
         }

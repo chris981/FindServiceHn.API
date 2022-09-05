@@ -11,7 +11,7 @@ namespace FindServiceHN.Core.OrderDetailManager
 {
 	public interface IOrderDetailManager
 	{
-        IEnumerable<OrderDetail> GetAll();
+        Task<IEnumerable<OrderDetail>> GetAllAsync();
         Task<OrderDetail> CreateOrderDetailAsync(OrderDetailDTO orderDetail);
         Task<bool> DeleteOrderDetailAsync(int id);
         Task<OrderDetail> UpdateOrderDetailAsync(OrderDetail orderDetail);

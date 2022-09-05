@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-namespace FindServiceHN.Core.Quotes_HeaderManager
+
+namespace FindServiceHN.Core.QuotesHeaderManager
 {
     public interface IQuotesHeaderManager
     {
@@ -12,6 +13,6 @@ namespace FindServiceHN.Core.Quotes_HeaderManager
         Task<QuotesHeader> CreateQuotesHeaderAsync(QuotesHeaderDTO quotesheader);
         Task<bool> DeleteQuotesHeaderAsync(int id);
         Task<QuotesHeader> UpdateQuotesHeaderAsync(QuotesHeader quotesheader);
-        QuotesHeader GetById(int id)
+        QuotesHeader GetById(int id);
     }
 }

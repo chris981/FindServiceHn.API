@@ -3,6 +3,7 @@ using FindServiceHn.Database.Repositories;
 using FindServiceHN.Core.Authentication;
 using FindServiceHN.Core.Models;
 using FindServiceHN.Core.ProviderManager;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using BCryptNet = BCrypt.Net.BCrypt;
 
@@ -14,28 +15,22 @@ namespace FindServiceHN.Core.ProviderManager
         private IRepository<ProviderEval> providerEvalRepository;
         private IRepository<ProviderPlanJob> providerPlanJobRepository;
         private IRepository<ProviderService> providerServiceRepository;
-        private IJwtUtils _jwtUtils;
-        private readonly AppSettings _appSettings;
 
         public ProviderManager(
             IRepository<Provider> ProviderRepository,
             IRepository<ProviderEval> ProviderEvalRepository,
             IRepository<ProviderPlanJob> ProviderPlanJobRepository,
-            IRepository<ProviderService> ProviderServiceRepository,
-            IJwtUtils jwtUtils,
-            IOptions<AppSettings> appSettings)
+            IRepository<ProviderService> ProviderServiceRepository)
         {
             this.ProviderRepository = ProviderRepository;
             this.providerEvalRepository = ProviderEvalRepository;
             this.providerPlanJobRepository = ProviderPlanJobRepository;
             this.providerServiceRepository=ProviderServiceRepository;
-            _jwtUtils = jwtUtils;
-            _appSettings = appSettings.Value;
         }
         #region"Provider"
-        public IEnumerable<Provider> GetAll()
+        public async Task<IEnumerable<Provider>> GetAllAsync()
         {
-            return this.ProviderRepository.All();
+            return await this.ProviderRepository.All().ToListAsync();
         }
         public async Task<Provider> CreateProviderAsync(ProviderDTO provider)
         {
@@ -51,7 +46,6 @@ namespace FindServiceHN.Core.ProviderManager
                     Department = provider.Department,
                     IdCategory = provider.IdCategory,
                     IdentificationCard = provider.IdentificationCard,
-                    IdProvider = provider.IdProvider,
                     IdSubcategory = provider.IdSubcategory,
                     IndDelivery = provider.IndDelivery,
                     IndusCai = provider.IndusCai,
@@ -130,9 +124,9 @@ namespace FindServiceHN.Core.ProviderManager
         #endregion
 
         #region"ProviderPlanJob"
-         public IEnumerable<ProviderPlanJob> GetProviderPlanJob()
+         public async Task<IEnumerable<ProviderPlanJob>> GetProviderPlanJobAsync()
         {
-            return this.providerPlanJobRepository.All();
+            return await this.providerPlanJobRepository.All().ToListAsync();
         }
         public async Task<ProviderPlanJob> CreateProviderPlanJobAsync(ProviderPlanJobDTO providerPlanJob)
         {
@@ -140,7 +134,6 @@ namespace FindServiceHN.Core.ProviderManager
             {
                 var newProviderPlanJob = new ProviderPlanJob
                 {
-                    IdQtyWorks= providerPlanJob.IdQtyWorks,
                     Amount= providerPlanJob.Amount,
                      Name= providerPlanJob.Name,
                      CreationDate= providerPlanJob.CreationDate,
@@ -195,9 +188,9 @@ namespace FindServiceHN.Core.ProviderManager
 
 
         #region "providerService"
-        public IEnumerable<ProviderService> GetAllProviderService()
+        public async Task<IEnumerable<ProviderService>> GetAllProviderServiceAsync()
         {
-            return this.providerServiceRepository.All();
+            return await this.providerServiceRepository.All().ToListAsync();
         }
 
         public async Task<ProviderService> CreateProviderServiceAsync(ProviderServiceDTO providerService)
@@ -206,7 +199,6 @@ namespace FindServiceHN.Core.ProviderManager
             {
                 var newProviderService = new ProviderService
                 {
-                   IdProviderService=providerService.IdProviderService,
                    Currency=providerService.Currency,
                    Description=providerService.Description,
                    IdServiceType=providerService.IdServiceType,
@@ -274,9 +266,9 @@ namespace FindServiceHN.Core.ProviderManager
 
 
         #region"provideEval"
-        public IEnumerable<ProviderEval> GetProviderEval()
+        public async Task<IEnumerable<ProviderEval>> GetProviderEvalAsync()
         {
-            return this.providerEvalRepository.All();
+            return await this.providerEvalRepository.All().ToListAsync();
         }
         public async Task<ProviderEval> CreateProviderEvalAsync(ProviderEvalDTO providerEval)
         {
@@ -285,7 +277,6 @@ namespace FindServiceHN.Core.ProviderManager
             {
                 var newProviderEval = new ProviderEval
                 {
-                 IdEval=providerEval.IdEval,
                  Company=providerEval.Company,
                  Country=providerEval.Country,
                  Department=providerEval.Department,

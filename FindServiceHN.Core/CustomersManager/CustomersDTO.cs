@@ -8,7 +8,6 @@ namespace FindServiceHN.Core.CustomersManager
 {
     public class CustomersDTO
     {
-        public int IdCustomer { get; set; }
         public string emailpassword { get; set; }
         public int Rtn { get; set; }
         public int Identificationcard { get; set; }

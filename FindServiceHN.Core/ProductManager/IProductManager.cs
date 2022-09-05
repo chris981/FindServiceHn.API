@@ -9,6 +9,10 @@ namespace FindServiceHN.Core.ProductManager
 {
     public interface IProductManager
     {
-        Task<Product> CreateProduct(Product product);
+        Task<IEnumerable<Product>> GetAllAsync();
+        Task<Product> CreateProductAsync(ProductDTO product);
+        Task<bool> DeleteProductAsync(int id);
+        Task<Product> UpdateProductAsync(Product product);
+        Product GetById(int id);
     }
 }

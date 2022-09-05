@@ -41,7 +41,7 @@ namespace FindServiceHn.API.Controllers
         [HttpPut("Update")]
         public async Task<IActionResult> UpdateAsync([FromBody] Countries countries)
         {
-            var result = await this.countriesManager.UpdateCountry(countries);
+            var result = await this.countriesManager.UpdateCountryAsync(countries);
             if (result != null)
                 return this.Accepted(countries);
 

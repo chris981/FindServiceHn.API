@@ -18,7 +18,7 @@ namespace FindServiceHn.API.Controllers
         [HttpGet("GetAll")]
         public IActionResult GetAll()
         {
-            return this.Ok(this.orderSatisfactionManager.GetAll());
+            return this.Ok(this.orderSatisfactionManager.GetAllAsync());
         }
 
        
