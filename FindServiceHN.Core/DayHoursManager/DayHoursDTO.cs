@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FindServiceHn.Database.Models
+namespace FindServiceHN.Core.DayHoursManager
 {
-    public class DayHour
+    public class DayHoursDTO
     {
         public int IdHour { get; set; }
         public string Hour { get; set; }
+
     }
 }
