@@ -15,10 +15,15 @@ namespace FindServiceHn.API.Controllers
             this.orderSatisfactionManager = orderSatisfactionManager;
         }
 
-        [HttpGet("GetAll")]
-        public IActionResult GetAll()
+        [HttpGet("GetOrderSatisfaction")]
+        public async Task<IActionResult> GetAllAsync()
         {
-            return this.Ok(this.orderSatisfactionManager.GetAllAsync());
+            var OrderSatisfactionResult = await this.orderSatisfactionManager.GetAllAsync();
+            if (OrderSatisfactionResult.Any())
+            {
+                return NotFound();
+            }
+            return this.Ok(OrderSatisfactionResult);
         }
 
        

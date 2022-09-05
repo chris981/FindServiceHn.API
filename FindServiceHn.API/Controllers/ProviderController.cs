@@ -16,11 +16,16 @@ namespace FindServiceHn.API.Controllers
 			this.ProviderManager = ProviderManager;
 		}
         #region"provider"
-        [HttpGet("GetAll")]
+        [HttpGet("GetProvider")]
 
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAllAsync()
         {
-            return this.Ok(this.ProviderManager.GetAllAsync());
+            var providersResult = await ProviderManager.GetAllAsync();
+            if (providersResult.Any())
+            {
+                return NotFound();
+            }
+            return this.Ok(providersResult);
         }
 
         [AllowAnonymous]
@@ -58,9 +63,14 @@ namespace FindServiceHn.API.Controllers
         #region"providerplanjob"
         [HttpGet("GetProviderPlanJob")]
 
-        public IActionResult GetProviderPlanJob()
+        public async Task<IActionResult> GetProviderPlanJob()
         {
-            return this.Ok(this.ProviderManager.GetAllAsync());
+            var providerPlanJobResult = await this.ProviderManager.GetProviderPlanJobAsync();
+            if (providerPlanJobResult.Any())
+            {
+                return NotFound();
+            }
+            return this.Ok(providerPlanJobResult);
         }
         [AllowAnonymous]
         [HttpPost("CreatePlanJob")]
@@ -94,9 +104,14 @@ namespace FindServiceHn.API.Controllers
         #region
         [HttpGet("GetProviderService")]
 
-        public IActionResult GetProviderService()
+        public async Task<IActionResult> GetProviderService()
         {
-            return this.Ok(this.ProviderManager.GetAllAsync());
+            var ProviderServiceResult = await this.ProviderManager.GetAllAsync();
+            if (ProviderServiceResult.Any())
+            {
+                return NotFound();
+            }
+            return this.Ok();
         }
         [AllowAnonymous]
         [HttpPost("CreateService")]
@@ -132,9 +147,14 @@ namespace FindServiceHn.API.Controllers
 
         [HttpGet("GetProviderEval")]
 
-        public IActionResult GetProviderEval()
+        public async Task<IActionResult> GetProviderEval()
         {
-            return this.Ok(this.ProviderManager.GetAllAsync());
+            var ProviderEvalResult = await this.ProviderManager.GetAllAsync();
+            if (ProviderEvalResult.Any())
+            {
+                return NotFound();
+            }
+            return this.Ok(ProviderEvalResult);
         }
         [AllowAnonymous]
         [HttpPost("CreateProviderEval")]
