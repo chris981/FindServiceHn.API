@@ -19,7 +19,7 @@ namespace FindServiceHn.API.Controllers
         public async Task<IActionResult> GetAllAsync()
         {
             var orderStatusResult = await this.orderStatusManager.GetAllAsync();
-            if (orderStatusResult.Any())
+            if (!orderStatusResult.Any())
             {
                 return NotFound();
             }

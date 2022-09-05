@@ -21,7 +21,7 @@ namespace FindServiceHn.API.Controllers
         public async Task<IActionResult> GetAllAsync()
         {
             var providersResult = await ProviderManager.GetAllAsync();
-            if (providersResult.Any())
+            if (!providersResult.Any())
             {
                 return NotFound();
             }
@@ -66,7 +66,7 @@ namespace FindServiceHn.API.Controllers
         public async Task<IActionResult> GetProviderPlanJob()
         {
             var providerPlanJobResult = await this.ProviderManager.GetProviderPlanJobAsync();
-            if (providerPlanJobResult.Any())
+            if (!providerPlanJobResult.Any())
             {
                 return NotFound();
             }
@@ -107,7 +107,7 @@ namespace FindServiceHn.API.Controllers
         public async Task<IActionResult> GetProviderService()
         {
             var ProviderServiceResult = await this.ProviderManager.GetAllAsync();
-            if (ProviderServiceResult.Any())
+            if (!ProviderServiceResult.Any())
             {
                 return NotFound();
             }
@@ -150,7 +150,7 @@ namespace FindServiceHn.API.Controllers
         public async Task<IActionResult> GetProviderEval()
         {
             var ProviderEvalResult = await this.ProviderManager.GetAllAsync();
-            if (ProviderEvalResult.Any())
+            if (!ProviderEvalResult.Any())
             {
                 return NotFound();
             }
