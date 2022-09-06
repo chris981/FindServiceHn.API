@@ -1,5 +1,6 @@
 ﻿using FindServiceHn.Database.Models;
 using FindServiceHN.Core.Authentication;
+using FindServiceHN.Core.MunicipalitiesManager;
 using FindServiceHN.Core.OrderDetailManager;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,10 +16,16 @@ namespace FindServiceHn.API.Controllers
             this.orderDetailManager = orderDetailManager;
         }
 
-        [HttpGet("GetAll")]
-        public IActionResult GetAll()
+        [HttpGet("GetOrderDetail")]
+        public async Task<IActionResult> GetAllAsync()
         {
-            return this.Ok(this.orderDetailManager.GetAllAsync());
+            var orderDetailResult = await this.orderDetailManager.GetAllAsync();
+            if (!orderDetailResult.Any())
+            {
+                return NotFound();
+            }
+            return Ok(orderDetailResult);
+ 
         }
 
         

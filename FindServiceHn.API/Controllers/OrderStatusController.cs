@@ -15,10 +15,15 @@ namespace FindServiceHn.API.Controllers
             this.orderStatusManager = orderStatusManager;
         }
 
-        [HttpGet("GetAll")]
-        public IActionResult GetAll()
+        [HttpGet("GetOrderStatus")]
+        public async Task<IActionResult> GetAllAsync()
         {
-            return this.Ok(this.orderStatusManager.GetAllAsync());
+            var orderStatusResult = await this.orderStatusManager.GetAllAsync();
+            if (!orderStatusResult.Any())
+            {
+                return NotFound();
+            }
+            return this.Ok(orderStatusResult);
         }
 
         
