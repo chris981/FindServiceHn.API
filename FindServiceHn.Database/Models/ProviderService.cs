@@ -18,6 +18,6 @@ namespace FindServiceHn.Database.Models
         public int Price { get; set; }
         public int Shipping { get; set; }
         public string ProductImage { get; set; }
-        public string IStatus { get; set; }
+        public string IdStatus { get; set; }
     }
 }

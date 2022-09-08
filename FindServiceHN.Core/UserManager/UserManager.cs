@@ -2,6 +2,7 @@
 using FindServiceHn.Database.Repositories;
 using FindServiceHN.Core.Authentication;
 using FindServiceHN.Core.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using BCryptNet = BCrypt.Net.BCrypt;
 
@@ -38,9 +39,9 @@ namespace FindServiceHN.Core.UserManager
             return new AuthenticateResponse(user, jwtToken);
         }
 
-        public IEnumerable<User> GetAll()
+        public async Task<IEnumerable<User>> GetAllAsync()
         {
-            return this.userRepository.All();
+            return await this.userRepository.All().ToListAsync();
         }
 
         public User GetById(int id)

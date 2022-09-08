@@ -13,14 +13,14 @@ namespace FindServiceHN.Core.QuotesHeaderManager
          public int IdProvider {get; set;}
          public int IdClientAddres {get; set;}
          public string Description {get; set;}
-         public int IdCate {get; set;}
+         public int IdCategory {get; set;}
 
          public int IdSubcategory {get; set;}
          public DateTime CreationDate {get; set;}
          public string AssigmentDate {get; set;}
-         public int IStatus {get; set;}
+         public int IdStatus {get; set;}
          public string CustomerObservation {get; set;}
          public string ProviderObservation {get; set;}
-         public int IStatusCreationDate {get; set;}
+         public int IdStatusCreationDate {get; set;}
     }
 }
