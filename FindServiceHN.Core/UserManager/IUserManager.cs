@@ -11,7 +11,7 @@ namespace FindServiceHN.Core.UserManager
     public interface IUserManager
     {
         AuthenticateResponse Authenticate(AuthenticateRequest model);
-        IEnumerable<User> GetAll();
+        Task <IEnumerable<User>> GetAllAsync();
         Task<User> CreateUserAsync(UserDTO user);
         Task<bool> DeleteUserAsync(int id);
         Task<User> UpdateUserAsync(User user);

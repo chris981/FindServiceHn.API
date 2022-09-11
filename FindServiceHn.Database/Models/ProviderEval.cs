@@ -20,6 +20,6 @@ namespace FindServiceHn.Database.Models
         public int Phone { get; set; }
         public int Idcategory { get; set; }
         public string Observation { get; set; }
-        public int Istatus { get; set; }
+        public int IdStatus { get; set; }
     }
 }

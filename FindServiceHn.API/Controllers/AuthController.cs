@@ -27,9 +27,9 @@ namespace FindServiceHn.API.Controllers
 
         [Authorize(Role.Admin)]
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            var users = userManager.GetAll();
+            var users = await userManager.GetAllAsync();
             return Ok(users);
         }
 

@@ -22,11 +22,11 @@ namespace FindServiceHN.Core.ProviderManager
         public int Phone { get; set; }
         public int IdCategory { get; set; }
         public int IdSubcategory { get; set; }
-        public int IndusCai { get; set; }
-        public int IndDelivery { get; set; }
-        public int AtentionFirst { get; set; }
-        public int AtentionLast { get; set; }
-        public string IStatus { get; set; }
+        public string IndusCai { get; set; }
+        public string IndDelivery { get; set; }
+        public string AtentionFirst { get; set; }
+        public string AtentionLast { get; set; }
+        public int IdStatus { get; set; }
         public string ProfilePicture { get; set; }
         public string ProfilePrincipal { get; set; }
         public string Url { get; set; }

@@ -49,7 +49,7 @@ namespace FindServiceHN.Core.ProviderManager
                     IdSubcategory = provider.IdSubcategory,
                     IndDelivery = provider.IndDelivery,
                     IndusCai = provider.IndusCai,
-                    IStatus = provider.IStatus,
+                    IdStatus = provider.IdStatus,
                     KeyValidation = provider.KeyValidation,
                     LastName = provider.LastName,
                     Municipality = provider.Municipality,
@@ -202,7 +202,7 @@ namespace FindServiceHN.Core.ProviderManager
                    Currency=providerService.Currency,
                    Description=providerService.Description,
                    IdServiceType=providerService.IdServiceType,
-                   IStatus=providerService.IStatus,
+                   IdStatus=providerService.IdStatus,
                    Price=providerService.Price,
                    Product=providerService.Product,
                    ProductImage=providerService.ProductImage,
@@ -249,7 +249,7 @@ namespace FindServiceHN.Core.ProviderManager
                 providerServiceToEdit.Shipping = providerService.Shipping;
                 providerServiceToEdit.Description = providerService.Description;
                 providerServiceToEdit.ProductImage = providerService.ProductImage;
-                providerServiceToEdit.IStatus= providerService.IStatus;
+                providerServiceToEdit.IdStatus= providerService.IdStatus;
                 providerServiceToEdit.TypeService = providerService.TypeService;
                 providerServiceToEdit.IdServiceType = providerService.IdServiceType;
 
@@ -282,7 +282,7 @@ namespace FindServiceHN.Core.ProviderManager
                  Department=providerEval.Department,
                  Email=providerEval.Email,
                  Idcategory=providerEval.Idcategory,
-                 Istatus=providerEval.Istatus,
+                 IdStatus=providerEval.IdStatus,
                  LastName=providerEval.LastName,
                  Name=providerEval.Name,
                  Observation=providerEval.Observation,
@@ -321,7 +321,7 @@ namespace FindServiceHN.Core.ProviderManager
                 providerEvalToEdit.Phone = providerEvalToEdit.Phone;
                 providerEvalToEdit.Country = providerEvalToEdit.Country;
                 providerEvalToEdit.Name = providerEvalToEdit.Name;
-                providerEvalToEdit.Istatus = providerEvalToEdit.Istatus;
+                providerEvalToEdit.IdStatus = providerEvalToEdit.IdStatus;
                 providerEvalToEdit.Company = providerEvalToEdit.Company;
 
                 var result = this.providerEvalRepository.Update(providerEvalToEdit);

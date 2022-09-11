@@ -57,14 +57,14 @@ namespace FindServiceHN.Core.QuotesHeaderManager
                 quotesheaderToEdit.IdProvider = quotesheader.IdProvider;
                 quotesheaderToEdit.IdClientAddres = quotesheader.IdClientAddres;
                 quotesheaderToEdit.Description = quotesheader.Description;
-                quotesheaderToEdit.IdCate = quotesheader.IdCate;
+                quotesheaderToEdit.IdCategory = quotesheader.IdCategory;
                 quotesheaderToEdit.IdSubcategory = quotesheader.IdSubcategory;
                 quotesheaderToEdit.CreationDate = quotesheader.CreationDate;
                 quotesheaderToEdit.AssigmentDate = quotesheader.AssigmentDate;
-                quotesheaderToEdit.IStatus = quotesheader.IStatus;
+                quotesheaderToEdit.IdStatus = quotesheader.IdStatus;
                 quotesheaderToEdit.CustomerObservation = quotesheader.CustomerObservation;
                 quotesheaderToEdit.ProviderObservation = quotesheader.ProviderObservation;
-                quotesheaderToEdit.IStatusCreationDate = quotesheader.IStatusCreationDate;
+                quotesheaderToEdit.IdStatusCreationDate = quotesheader.IdStatusCreationDate;
 
                 var result = this.quotesheaderRepository.Update(quotesheaderToEdit);
                 await this.quotesheaderRepository.SaveChangesAsync();
@@ -87,14 +87,14 @@ namespace FindServiceHN.Core.QuotesHeaderManager
                     IdProvider = quotesheader.IdProvider,
                     IdClientAddres = quotesheader.IdClientAddres,
                     Description = quotesheader.Description,
-                    IdCate = quotesheader.IdCate,
+                    IdCategory = quotesheader.IdCategory,
                     IdSubcategory = quotesheader.IdSubcategory,
                     CreationDate = quotesheader.CreationDate,
                     AssigmentDate = quotesheader.AssigmentDate,
-                    IStatus = quotesheader.IStatus,
+                    IdStatus = quotesheader.IdStatus,
                     CustomerObservation = quotesheader.CustomerObservation,
                     ProviderObservation = quotesheader.ProviderObservation,
-                    IStatusCreationDate = quotesheader.IStatusCreationDate,                  
+                    IdStatusCreationDate = quotesheader.IdStatusCreationDate,                  
                 };
 
                 var result = this.quotesheaderRepository.Create(newQuotesHeader);

@@ -20,7 +20,7 @@ namespace FindServiceHN.Core.CustomersManager
         public DateTime BirthDate { get; set; }
         public int Phone { get; set; }
         public string Status { get; set; }
-        public byte[] ProfilePicture { get; set; }
+        public string ProfilePicture { get; set; }
         public string MainProfile { get; set; }
         public string KeyValidation { get; set; }
         public string UserType { get; set; }

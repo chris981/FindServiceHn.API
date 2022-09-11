@@ -15,10 +15,16 @@ namespace FindServiceHn.API.Controllers
             this.userManager = userManager;
         }
 
-        [HttpGet("GetAll")]
-        public IActionResult GetAll()
+        [HttpGet("GetAllAsync")]
+        public async Task<IActionResult> GetAllAsync()
         {
-            return this.Ok(this.userManager.GetAll());
+            var userResult = await this.userManager.GetAllAsync();
+            if (!userResult.Any())
+            {
+                return NotFound();
+            }
+
+            return Ok(userResult);
         }
 
         [AllowAnonymous]
