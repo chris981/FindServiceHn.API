@@ -8,6 +8,7 @@ namespace FindServiceHN.Core.ProviderManager
 {
     public class ProviderPlanJobDTO
     {
+        public int IdQtyWorks { get; set; }
         public string Name { get; set; }
         public int Amount { get; set; }
         public DateTime CreationDate { get; set; }

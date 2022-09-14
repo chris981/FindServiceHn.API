@@ -8,6 +8,8 @@ namespace FindServiceHN.Core.ProviderManager
 {
     public class ProviderServiceDTO
     {
+
+        public int IdProviderService { get; set; }
         public string Product { get; set; }
         public int IdServiceType { get; set; }
         public string TypeService { get; set; }

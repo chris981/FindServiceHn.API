@@ -9,6 +9,7 @@ namespace FindServiceHN.Core.ProviderManager
 {
     public class ProviderDTO
     {
+        public int IdProvider { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public int RTN { get; set; }
