@@ -9,7 +9,7 @@ namespace FindServiceHN.Core.MunicipalitiesManager
     public class MunicipalitiesDTO
     {
         public int IdCountry { get; set; }
-        public int IdDeparment { get; set; }
+        public int IdDepartment { get; set; }
         public string Description { get; set; }
         public DateTime CreationDate { get; set; }
         public int IdUserCreation { get; set; }
