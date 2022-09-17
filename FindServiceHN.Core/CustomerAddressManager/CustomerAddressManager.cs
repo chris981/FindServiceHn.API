@@ -51,7 +51,7 @@ namespace FindServiceHN.Core.CustomerAddressManager
                 customerAddressToEdit.IdCustomerAddress = customerAddress.IdCustomerAddress;
                 customerAddressToEdit.IdCustomer = customerAddress.IdCustomer;
                 customerAddressToEdit.IdCountry = customerAddress.IdCountry;
-                customerAddressToEdit.IdDeparment = customerAddress.IdDeparment;
+                customerAddressToEdit.IdDepartment = customerAddress.IdDepartment;
                 customerAddressToEdit.IdMunicipality = customerAddress.IdMunicipality;
                 customerAddressToEdit.Direction = customerAddress.Direction;
                 customerAddressToEdit.Observations = customerAddress.Observations;
@@ -76,7 +76,7 @@ namespace FindServiceHN.Core.CustomerAddressManager
                 {
                     IdCustomer = customerAddress.IdCustomer,
                     IdCountry = customerAddress.IdCountry,
-                    IdDeparment = customerAddress.IdDeparment,
+                    IdDepartment = customerAddress.IdDepartment,
                     IdMunicipality=customerAddress.IdMunicipality,
                     Direction = customerAddress.Direction,
                     Observations = customerAddress.Observations,

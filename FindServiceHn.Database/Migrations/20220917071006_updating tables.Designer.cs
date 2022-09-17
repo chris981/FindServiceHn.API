@@ -3,6 +3,7 @@ using System;
 using FindServiceHn.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FindServiceHn.Database.Migrations
 {
     [DbContext(typeof(FindServiceHnContext))]
-    partial class FindServiceHnContextModelSnapshot : ModelSnapshot
+    [Migration("20220917071006_updating tables")]
+    partial class updatingtables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -240,7 +242,7 @@ namespace FindServiceHn.Database.Migrations
                     b.Property<int>("IdCountry")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdDepartment")
+                    b.Property<int>("IdDeparment")
                         .HasColumnType("int");
 
                     b.Property<int>("IdStatus")

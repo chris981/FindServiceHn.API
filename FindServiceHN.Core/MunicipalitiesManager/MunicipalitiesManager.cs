@@ -49,7 +49,7 @@ namespace FindServiceHN.Core.MunicipalitiesManager
             {
                 var MunicipalityToEdit = this.GetById(municipalities.IdMunicipality);
                 MunicipalityToEdit.IdMunicipality = municipalities.IdMunicipality;
-                MunicipalityToEdit.IdDeparment = municipalities.IdDeparment;
+                MunicipalityToEdit.IdDepartment = municipalities.IdDepartment;
                 MunicipalityToEdit.IdCountry = municipalities.IdCountry;
                 MunicipalityToEdit.Description = municipalities.Description;
                 MunicipalityToEdit.CreationDate = municipalities.CreationDate;
@@ -73,7 +73,7 @@ namespace FindServiceHN.Core.MunicipalitiesManager
             {
                 var newMunicipality = new Municipalities
                 {
-                    IdDeparment = municipalities.IdDeparment,
+                    IdDepartment = municipalities.IdDepartment,
                     IdCountry = municipalities.IdCountry,
                     Description = municipalities.Description,
                     CreationDate = municipalities.CreationDate,
